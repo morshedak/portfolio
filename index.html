@@ -292,6 +292,12 @@ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transfo
 .cert h3{margin:0 0 .45rem;font-size:.96rem;font-weight:700;line-height:1.4}
 .cert .org{margin:0;font-size:.82rem;color:var(--cyan)}
 .cert .date{margin:.3rem 0 0;font-size:.76rem;color:var(--muted);font-family:var(--hf);font-weight:600}
+.cert-pdf{display:inline-flex;align-items:center;gap:.35rem;margin-top:.8rem;padding:.3rem .75rem;border-radius:99px;font-size:.71rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,45,120,.35);color:var(--pink);background:rgba(255,45,120,.08);transition:background .25s ease,border-color .25s ease,color .25s ease}
+.cert-pdf:hover{background:rgba(255,45,120,.18);border-color:var(--pink);color:#fff}
+.cert-pdf svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
+.edu-pdf{display:inline-flex;align-items:center;gap:.35rem;margin-top:.85rem;padding:.32rem .8rem;border-radius:99px;font-size:.71rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,170,0,.35);color:var(--amber);background:rgba(255,170,0,.08);transition:background .25s ease,border-color .25s ease,color .25s ease}
+.edu-pdf:hover{background:rgba(255,170,0,.2);border-color:var(--amber);color:#fff}
+.edu-pdf svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 /* ---------- education ---------- */
 .edu{display:flex;gap:1.3rem;align-items:flex-start;padding:1.6rem 1.5rem;border-radius:16px;background:var(--surface);border:1px solid var(--line);
 backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s var(--ease),border-color .3s ease}
@@ -447,10 +453,10 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
         <a class="soc" href="mailto:murshedalkasem@gmail.com" aria-label="Email Mohamad Morshed Alkasem">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg>
         </a>
-        <a class="soc" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <a class="soc" href="https://www.linkedin.com/in/mohamed-morshed-alkasem-86217531a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.2 8.65 21 11 21 14.1V21h-4v-6.1c0-1.46-.52-2.45-1.82-2.45-.99 0-1.58.67-1.84 1.32-.1.23-.12.56-.12.89V21H9z"/></svg>
         </a>
-        <a class="soc" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <a class="soc" href="https://github.com/morshedak" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
         </a>
       </div>
@@ -670,11 +676,11 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <p class="sec-lead" data-i18n="ce.lead">Formal training from CRTI, TEKWIN Center and IEEE PES, plus online study.</p>
     </header>
     <div class="grid3">
-      <article class="cert c-p rv"><h3 data-i18n="c1.t">FDM 3D Printing Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c1.d">4–5 November 2024</p></article>
-      <article class="cert c-p rv" style="transition-delay:.08s"><h3 data-i18n="c2.t">Laser Cutting Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c2.d">4–5 November 2024</p></article>
-      <article class="cert c-c rv" style="transition-delay:.16s"><h3 data-i18n="c3.t">Automobile Memory Programming</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c3.d">12–17 July 2025</p></article>
-      <article class="cert c-c rv" style="transition-delay:.24s"><h3 data-i18n="c4.t">Automobile Scanner Course</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c4.d">27–31 July 2025</p></article>
-      <article class="cert c-a rv" style="transition-delay:.32s"><h3 data-i18n="c5.t">The Role of HVDC and Power Electronics in the Future Smart Electric Grid</h3><p class="org">IEEE Power &amp; Energy Society (PES)</p><p class="date" data-i18n="c5.d">24 February 2025</p></article>
+      <article class="cert c-p rv"><h3 data-i18n="c1.t">FDM 3D Printing Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c1.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-fdm-3d-printing.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
+      <article class="cert c-p rv" style="transition-delay:.08s"><h3 data-i18n="c2.t">Laser Cutting Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c2.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-laser-cutting.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
+      <article class="cert c-c rv" style="transition-delay:.16s"><h3 data-i18n="c3.t">Automobile Memory Programming</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c3.d">12–17 July 2025</p><a class="cert-pdf" href="certs/tekwin-memory-programming.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
+      <article class="cert c-c rv" style="transition-delay:.24s"><h3 data-i18n="c4.t">Automobile Scanner Course</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c4.d">27–31 July 2025</p><a class="cert-pdf" href="certs/tekwin-scanner.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
+      <article class="cert c-a rv" style="transition-delay:.32s"><h3 data-i18n="c5.t">The Role of HVDC and Power Electronics in the Future Smart Electric Grid</h3><p class="org">IEEE Power &amp; Energy Society (PES)</p><p class="date" data-i18n="c5.d">24 February 2025</p><a class="cert-pdf" href="certs/ieee-pes-hvdc.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
       <article class="cert rv" style="transition-delay:.4s"><h3 data-i18n="c6.t">SolidWorks Design and 3D Modeling</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
       <article class="cert rv" style="transition-delay:.48s"><h3 data-i18n="c7.t">MATLAB and Simulink for Energy Systems</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
       <article class="cert rv" style="transition-delay:.56s"><h3 data-i18n="c8.t">Arduino and Microcontroller Basics</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
@@ -694,6 +700,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <div>
         <h3 data-i18n="ed1.t">Master’s Degree in Electromechanics Engineering</h3>
         <p><b data-i18n="ed1.i">University of Science and Technology of Oran Mohamed Boudiaf (USTO-MB)</b><br><span data-i18n="ed1.l">Oran, Algeria</span></p>
+        <a class="edu-pdf" href="certs/masters-degree.pdf" target="_blank" rel="noopener" data-i18n="ce.viewDiploma"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Diploma</a>
       </div>
     </article>
     <article class="edu rv rv-l" style="transition-delay:.12s">
@@ -701,6 +708,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <div>
         <h3 data-i18n="ed2.t">Secondary School Diploma (Baccalaureate)</h3>
         <p><b data-i18n="ed2.i">Ahmed Mehsas High School</b><br><span data-i18n="ed2.l">Oran, Algeria</span></p>
+        <a class="edu-pdf" href="certs/baccalaureate.pdf" target="_blank" rel="noopener" data-i18n="ce.viewDiploma"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Diploma</a>
       </div>
     </article>
   </div>
@@ -829,7 +837,7 @@ I18N.en = {
 "pr2.t":"Automotive ECU Diagnostics","pr2.d":"Certified training at TEKWIN Center in automobile memory programming and scanner-based diagnostics — reading, interpreting and reprogramming vehicle control units.","pr2.g1":"ECU Programming","pr2.g2":"Diagnostics","pr2.g3":"Automotive",
 "pr3.t":"CNC & Digital Manufacturing","pr3.d":"Operated a CTX Beta 1250 TC turning centre at CRTI’s SMRIS platform alongside FDM 3D printing and laser cutting work, plus mechanical assembly and electrical maintenance.","pr3.g1":"CNC","pr3.g2":"3D Printing","pr3.g3":"Laser Cutting",
 "ss1.t":"C++ Programming","ss1.d":"Self-taught to intermediate level.","ss2.t":"Microprocessors","ss2.d":"Structure and operation of microprocessors.","ss3.t":"PC Hardware","ss3.d":"Assembly, disassembly and component selection.","ss4.t":"Web Fundamentals","ss4.d":"HTML basics and how the web works.",
-"ce.eyebrow":"Certifications","ce.title":"Courses & credentials","ce.lead":"Formal training from CRTI, TEKWIN Center and IEEE PES, plus online study.","ce.online":"Online & self-study","ce.ongoing":"Ongoing",
+"ce.eyebrow":"Certifications","ce.title":"Courses & credentials","ce.lead":"Formal training from CRTI, TEKWIN Center and IEEE PES, plus online study.","ce.online":"Online & self-study","ce.ongoing":"Ongoing","ce.view":"View Certificate","ce.viewDiploma":"View Diploma",
 "c1.t":"FDM 3D Printing Course","c1.d":"4–5 November 2024","c2.t":"Laser Cutting Course","c2.d":"4–5 November 2024",
 "c3.t":"Automobile Memory Programming","c3.d":"12–17 July 2025","c4.t":"Automobile Scanner Course","c4.d":"27–31 July 2025",
 "c5.t":"The Role of HVDC and Power Electronics in the Future Smart Electric Grid","c5.d":"24 February 2025",
@@ -886,7 +894,7 @@ I18N.fr = {
 "pr2.t":"Diagnostic de calculateurs automobiles","pr2.d":"Formation certifiée au centre TEKWIN en programmation de mémoires automobiles et en diagnostic par valise — lecture, interprétation et reprogrammation des calculateurs de véhicules.","pr2.g1":"Programmation ECU","pr2.g2":"Diagnostic","pr2.g3":"Automobile",
 "pr3.t":"CNC & fabrication numérique","pr3.d":"Conduite d’un tour CTX Beta 1250 TC à la plateforme SMRIS du CRTI, avec de l’impression 3D FDM et de la découpe laser, ainsi que de l’assemblage mécanique et de la maintenance électrique.","pr3.g1":"CNC","pr3.g2":"Impression 3D","pr3.g3":"Découpe laser",
 "ss1.t":"Programmation C++","ss1.d":"Autodidacte jusqu’au niveau intermédiaire.","ss2.t":"Microprocesseurs","ss2.d":"Structure et fonctionnement des microprocesseurs.","ss3.t":"Matériel informatique","ss3.d":"Montage, démontage et choix des composants.","ss4.t":"Bases du web","ss4.d":"Bases du HTML et fonctionnement du web.",
-"ce.eyebrow":"Certifications","ce.title":"Formations & attestations","ce.lead":"Formations officielles du CRTI, du centre TEKWIN et de l’IEEE PES, complétées par de l’auto-formation.","ce.online":"En ligne & auto-formation","ce.ongoing":"En cours",
+"ce.eyebrow":"Certifications","ce.title":"Formations & attestations","ce.lead":"Formations officielles du CRTI, du centre TEKWIN et de l’IEEE PES, complétées par de l’auto-formation.","ce.online":"En ligne & auto-formation","ce.ongoing":"En cours","ce.view":"Voir le certificat","ce.viewDiploma":"Voir le diplôme",
 "c1.t":"Formation impression 3D FDM","c1.d":"4–5 novembre 2024","c2.t":"Formation découpe laser","c2.d":"4–5 novembre 2024",
 "c3.t":"Programmation de mémoires automobiles","c3.d":"12–17 juillet 2025","c4.t":"Formation valise de diagnostic automobile","c4.d":"27–31 juillet 2025",
 "c5.t":"Le rôle du HVDC et de l’électronique de puissance dans le futur réseau électrique intelligent","c5.d":"24 février 2025",
@@ -1278,5 +1286,3 @@ function observeBars(){
 
 </body>
 </html>
-
-
