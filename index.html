@@ -446,7 +446,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <p class="hero-role" data-i18n="hero.role">Electromechanics Engineer · Energy Systems &amp; Automotive Electronics</p>
       <p class="hero-bio" data-i18n="hero.bio">Master’s graduate in Electromechanics Engineering from USTO-MB, Oran, working across energy systems, automotive diagnostics and industrial manufacturing. I build, simulate and optimise — from hybrid microgrids in MATLAB to CNC machining and ECU programming on the shop floor.</p>
       <div class="cta">
-        <button class="btn btn-1" id="cvBtn"><span aria-hidden="true">⬇</span><span data-i18n="hero.cv">Download CV</span></button>
+        <a class="btn btn-1" href="cv/CV2026.pdf" download="Mohamad_Morshed_Alkasem_CV.pdf" id="cvBtn"><span aria-hidden="true">⬇</span><span data-i18n="hero.cv">Download CV</span></a>
         <a class="btn btn-2" href="#contact"><span aria-hidden="true">✉</span><span data-i18n="hero.contact">Contact Me</span></a>
       </div>
       <div class="socials">
@@ -627,6 +627,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
           <span class="chip" data-i18n="th.bat">Battery Storage</span>
           <span class="chip" data-i18n="th.ev">Electric Vehicles</span>
         </div>
+        <a class="edu-pdf" href="certs/thesis.pdf" target="_blank" rel="noopener" style="margin-top:1.2rem" data-i18n="th.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:13px;height:13px;fill:currentColor;flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>Read Full Thesis (PDF)</a>
       </div>
     </article>
   </div>
@@ -831,7 +832,7 @@ I18N.en = {
 "th.c1t":"Problem","th.c1d":"A hybrid microgrid draws from intermittent sources — sun and wind — while serving a demand curve that does not match generation. Batteries and electric vehicles add storage that can charge or discharge, so supply, demand and cost have to be balanced continuously rather than sized once.",
 "th.c2t":"Approach","th.c2d":"I modelled the full system in MATLAB and Simulink — PV array, wind turbine, battery bank and EV charging — then developed optimization algorithms that dispatch each source against load and cost constraints across the operating cycle.",
 "th.c3t":"Outcome","th.c3d":"The simulated management strategy improved system efficiency and operational reliability, keeping the load served while reducing cost and easing stress on storage. The work formed the basis of my Master’s degree, awarded in 2025.",
-"th.tools":"Tools & components","th.pv":"Photovoltaic Panels","th.wind":"Wind Turbines","th.bat":"Battery Storage","th.ev":"Electric Vehicles",
+"th.tools":"Tools & components","th.pdf":"Read Full Thesis (PDF)","th.pv":"Photovoltaic Panels","th.wind":"Wind Turbines","th.bat":"Battery Storage","th.ev":"Electric Vehicles",
 "pr.eyebrow":"Projects","pr.title":"Things I’ve built and studied","pr.lead":"Academic work, certified training and self-directed study.","pr.self":"Self-study projects",
 "pr1.t":"Hybrid Microgrid Energy Management","pr1.d":"Master’s thesis: a simulated energy management system balancing PV, wind, battery storage and EV load through optimization algorithms built in MATLAB and Simulink.","pr1.g":"Optimization",
 "pr2.t":"Automotive ECU Diagnostics","pr2.d":"Certified training at TEKWIN Center in automobile memory programming and scanner-based diagnostics — reading, interpreting and reprogramming vehicle control units.","pr2.g1":"ECU Programming","pr2.g2":"Diagnostics","pr2.g3":"Automotive",
@@ -888,7 +889,7 @@ I18N.fr = {
 "th.c1t":"Problème","th.c1d":"Un micro-réseau hybride s’appuie sur des sources intermittentes — le soleil et le vent — tout en alimentant une courbe de demande qui ne suit pas la production. Les batteries et les véhicules électriques ajoutent un stockage qui peut se charger ou se décharger : l’offre, la demande et le coût doivent donc être équilibrés en continu, et non dimensionnés une fois pour toutes.",
 "th.c2t":"Démarche","th.c2d":"J’ai modélisé l’ensemble du système sous MATLAB et Simulink — champ photovoltaïque, éolienne, parc de batteries et recharge de véhicules électriques — puis développé des algorithmes d’optimisation qui répartissent chaque source selon les contraintes de charge et de coût sur tout le cycle de fonctionnement.",
 "th.c3t":"Résultat","th.c3d":"La stratégie de gestion simulée a amélioré le rendement et la fiabilité d’exploitation du système, en maintenant l’alimentation de la charge tout en réduisant le coût et les contraintes sur le stockage. Ce travail a constitué la base de mon master, obtenu en 2025.",
-"th.tools":"Outils & composants","th.pv":"Panneaux photovoltaïques","th.wind":"Éoliennes","th.bat":"Stockage par batteries","th.ev":"Véhicules électriques",
+"th.tools":"Outils & composants","th.pdf":"Lire la thèse complète (PDF)","th.pv":"Panneaux photovoltaïques","th.wind":"Éoliennes","th.bat":"Stockage par batteries","th.ev":"Véhicules électriques",
 "pr.eyebrow":"Projets","pr.title":"Ce que j’ai réalisé et étudié","pr.lead":"Travaux académiques, formations certifiées et auto-formation.","pr.self":"Projets d’auto-formation",
 "pr1.t":"Gestion d’énergie d’un micro-réseau hybride","pr1.d":"Mémoire de master : un système de gestion de l’énergie simulé équilibrant photovoltaïque, éolien, stockage par batteries et charge des véhicules électriques grâce à des algorithmes d’optimisation développés sous MATLAB et Simulink.","pr1.g":"Optimisation",
 "pr2.t":"Diagnostic de calculateurs automobiles","pr2.d":"Formation certifiée au centre TEKWIN en programmation de mémoires automobiles et en diagnostic par valise — lecture, interprétation et reprogrammation des calculateurs de véhicules.","pr2.g1":"Programmation ECU","pr2.g2":"Diagnostic","pr2.g3":"Automobile",
@@ -1231,11 +1232,7 @@ function observeBars(){
  window.addEventListener("resize",function(){if(window.innerWidth>768)close();});
 })();
 
-/* ====================== CV download / print ====================== */
-(function cv(){
- var b=$("#cvBtn");
- if(b) b.addEventListener("click",function(){window.print();});
-})();
+/* CV button is a native <a download> link — no JS needed */
 
 /* ====================== contact form ====================== */
 (function form(){
