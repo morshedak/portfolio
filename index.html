@@ -754,7 +754,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
           <span class="ic" aria-hidden="true">💼</span>
           <span><span data-i18n="ct.status">Status</span><b data-i18n="ct.statusv">Open to opportunities — open to relocation</b></span>
         </div>
-        <form id="cform" action="mailto:murshedalkasem@gmail.com" method="post" enctype="text/plain">
+        <form id="cform" action="https://formspree.io/f/xljgpvow" method="POST">
           <h3 data-i18n="ct.formTitle">Send a message</h3>
           <div class="field">
             <label for="fName" data-i18n="ct.name">Name</label>
@@ -772,8 +772,8 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
             <label for="fMsg" data-i18n="ct.message">Message</label>
             <textarea id="fMsg" name="Message" required data-i18n-ph="ct.msgPh" placeholder="Tell me about the role or project…"></textarea>
           </div>
-          <button class="btn btn-1" type="submit"><span aria-hidden="true">➤</span><span data-i18n="ct.send">Send Message</span></button>
-          <p class="form-note" data-i18n="ct.note">This form opens your own email client with the message pre-filled.</p>
+          <button class="btn btn-1" type="submit" id="formSubmitBtn"><span aria-hidden="true">➤</span><span data-i18n="ct.send" id="formBtnTxt">Send Message</span></button>
+          <p class="form-note" id="formNote" data-i18n="ct.note">Your message goes directly to my inbox.</p>
         </form>
       </div>
       <div class="avatar-wrap rv rv-r">
@@ -851,7 +851,7 @@ I18N.en = {
 "ct.email":"Email","ct.phone":"Phone","ct.loc":"Location","ct.locv":"Oran, Algeria","ct.status":"Status","ct.statusv":"Open to opportunities — open to relocation",
 "ct.formTitle":"Send a message","ct.name":"Name","ct.namePh":"Your name","ct.yourEmail":"Email","ct.emailPh":"you@example.com",
 "ct.subject":"Subject","ct.subjectPh":"What’s this about?","ct.message":"Message","ct.msgPh":"Tell me about the role or project…",
-"ct.send":"Send Message","ct.note":"This form opens your own email client with the message pre-filled.",
+"ct.send":"Send Message","ct.note":"Your message goes directly to my inbox.",
 "ft.tag":"Electromechanics Engineer · Energy Systems, Automotive Electronics & Manufacturing","ft.rights":"© 2025 Mohamad Morshed Alkasem · Built from scratch in Oran, Algeria.",
 "top.label":"Back to top",
 "meta.title":"Mohamad Morshed Alkasem — Electromechanics Engineer",
@@ -908,7 +908,7 @@ I18N.fr = {
 "ct.email":"E-mail","ct.phone":"Téléphone","ct.loc":"Localisation","ct.locv":"Oran, Algérie","ct.status":"Statut","ct.statusv":"Ouvert aux opportunités — disponible pour une mobilité",
 "ct.formTitle":"Envoyer un message","ct.name":"Nom","ct.namePh":"Votre nom","ct.yourEmail":"E-mail","ct.emailPh":"vous@exemple.com",
 "ct.subject":"Objet","ct.subjectPh":"Quel est le sujet ?","ct.message":"Message","ct.msgPh":"Parlez-moi du poste ou du projet…",
-"ct.send":"Envoyer le message","ct.note":"Ce formulaire ouvre votre propre logiciel de messagerie avec le message pré-rempli.",
+"ct.send":"Envoyer le message","ct.note":"Votre message arrive directement dans ma boîte mail.",
 "ft.tag":"Ingénieur en électromécanique · Systèmes énergétiques, électronique automobile & fabrication","ft.rights":"© 2025 Mohamad Morshed Alkasem · Conçu entièrement à la main à Oran, Algérie.",
 "top.label":"Retour en haut",
 "meta.title":"Mohamad Morshed Alkasem — Ingénieur en électromécanique",
@@ -1234,18 +1234,48 @@ function observeBars(){
 
 /* CV button is a native <a download> link — no JS needed */
 
-/* ====================== contact form ====================== */
+/* ====================== contact form (Formspree) ====================== */
 (function form(){
  var f=$("#cform");
  if(!f) return;
+ var btn=document.getElementById("formSubmitBtn");
+ var btnTxt=document.getElementById("formBtnTxt");
+ var note=document.getElementById("formNote");
+ var lang=document.documentElement.lang||"en";
+ var msgs={
+  sending:{en:"Sending…",fr:"Envoi en cours…"},
+  ok:{en:"✓ Message sent! I'll get back to you soon.",fr:"✓ Message envoyé ! Je vous répondrai bientôt."},
+  err:{en:"✗ Something went wrong. Please email me directly.",fr:"✗ Une erreur s'est produite. Contactez-moi par email."}
+ };
  f.addEventListener("submit",function(e){
-  if(!f.checkValidity()) return; /* let the browser show its messages */
   e.preventDefault();
-  var g=function(id){var el=$(id);return el?el.value.trim():"";};
-  var subject=g("#fSubject")||"Portfolio contact";
-  var body="Name: "+g("#fName")+"\nEmail: "+g("#fEmail")+"\n\n"+g("#fMsg");
-  window.location.href="mailto:murshedalkasem@gmail.com?subject="+
-   encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  if(!f.checkValidity()){f.reportValidity();return;}
+  btn.disabled=true;
+  btnTxt.textContent=msgs.sending[lang]||msgs.sending.en;
+  note.style.display="none";
+  fetch("https://formspree.io/f/xljgpvow",{
+   method:"POST",
+   headers:{"Accept":"application/json"},
+   body:new FormData(f)
+  }).then(function(r){
+   if(r.ok){
+    f.reset();
+    note.textContent=msgs.ok[lang]||msgs.ok.en;
+    note.style.color="var(--cyan)";
+   } else {
+    note.textContent=msgs.err[lang]||msgs.err.en;
+    note.style.color="var(--pink)";
+    btn.disabled=false;
+    btnTxt.textContent=(lang==="fr")?"Envoyer":"Send Message";
+   }
+   note.style.display="block";
+  }).catch(function(){
+   note.textContent=msgs.err[lang]||msgs.err.en;
+   note.style.color="var(--pink)";
+   note.style.display="block";
+   btn.disabled=false;
+   btnTxt.textContent=(lang==="fr")?"Envoyer":"Send Message";
+  });
  });
 })();
 
