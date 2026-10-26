@@ -7,17 +7,25 @@
 <meta name="description" id="metaDesc" content="Electromechanics engineer working across energy systems, automotive electronics and industrial manufacturing. Master's graduate of USTO-MB, Oran. Open to opportunities.">
 <meta name="author" content="Mohamad Morshed Alkasem">
 <meta name="theme-color" content="#050210">
+<link rel="canonical" href="https://morshedak.github.io/portfolio/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://morshedak.github.io/portfolio/">
+<meta property="og:image" content="https://morshedak.github.io/portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" id="ogTitle" content="Mohamad Morshed Alkasem — Electromechanics Engineer">
 <meta property="og:description" id="ogDesc" content="Electromechanics engineer working across energy systems, automotive electronics and industrial manufacturing. Master's graduate of USTO-MB, Oran. Open to opportunities.">
 <meta property="og:locale" id="ogLocale" content="en_US">
 <meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ar_AR">
 <link rel="alternate" hreflang="en" href="?lang=en">
 <link rel="alternate" hreflang="fr" href="?lang=fr">
+<link rel="alternate" hreflang="ar" href="?lang=ar">
 <link rel="alternate" hreflang="x-default" href="?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050210'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='30' font-weight='bold' text-anchor='middle' fill='%23ff2d78'%3EM%3C/text%3E%3C/svg%3E">
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -25,7 +33,7 @@
 --bg:#050210;--surface:rgba(26,10,60,.55);--surface2:rgba(26,10,60,.3);
 --pink:#ff2d78;--cyan:#00d4ff;--amber:#ffaa00;
 --text:#f0eeff;--muted:#8b80b0;--line:rgba(240,238,255,.1);
---hf:'Syne',Verdana,sans-serif;--bf:'DM Sans',Helvetica,Arial,sans-serif;
+--hf:'Syne','Noto Kufi Arabic',Verdana,sans-serif;--bf:'DM Sans','Noto Kufi Arabic',Helvetica,Arial,sans-serif;
 --max:1180px;--ease:cubic-bezier(.2,.8,.2,1);
 }
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#ff2d78 #0a0418}
@@ -389,6 +397,36 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
  p,.sec-lead,.job ul,.col p{color:#333}
  .card3d{animation:none;transform:none}
 }
+/* ---------- Arabic / RTL ---------- */
+html[lang="ar"] *{letter-spacing:0!important;text-transform:none!important}
+html[lang="ar"] p,html[lang="ar"] li{line-height:1.9}
+html[dir="rtl"] .nav-links a::after{transform-origin:100% 50%}
+html[dir="rtl"] .lang-menu{right:auto;left:0}
+html[dir="rtl"] .lang-opt{text-align:right}
+html[dir="rtl"] .lang-opt[aria-current="true"]::after{margin-left:0;margin-right:auto}
+html[dir="rtl"] .tl{padding-left:0;padding-right:2.1rem}
+html[dir="rtl"] .tl::before{left:auto;right:5px}
+html[dir="rtl"] .job::before{left:auto;right:0}
+html[dir="rtl"] .job:hover{transform:translateX(-12px);box-shadow:10px 14px 40px rgba(0,0,0,.4)}
+html[dir="rtl"] .node{left:auto;right:-2.1rem}
+html[dir="rtl"] .job ul{padding-left:0;padding-right:1.05rem}
+html[dir="rtl"] .thesis::before{right:auto;left:-18%}
+html[dir="rtl"] .col:not(:last-child)::after{content:"←";right:auto;left:-.95rem}
+html[dir="rtl"] .cert{border-left:1px solid var(--line);border-right:3px solid var(--muted)}
+html[dir="rtl"] .cert.c-p{border-right-color:var(--pink)}
+html[dir="rtl"] .cert.c-c{border-right-color:var(--cyan)}
+html[dir="rtl"] .cert.c-a{border-right-color:var(--amber)}
+html[dir="rtl"] .edu:hover{transform:translateX(-9px)}
+html[dir="rtl"] .info:hover{transform:translateX(-10px)}
+html[dir="rtl"] #top{right:auto;left:1.3rem}
+html[dir="rtl"] input[type="email"]{direction:ltr;text-align:right}
+@media (max-width:980px){
+ html[dir="rtl"] .col:not(:last-child)::after{content:"↓";left:auto;right:50%;transform:translateX(50%)}
+}
+@media (max-width:768px){
+ html[dir="rtl"] .nav-links a::after{left:auto;right:.4rem}
+ html[dir="rtl"] .job:hover,html[dir="rtl"] .edu:hover,html[dir="rtl"] .info:hover{transform:none}
+}
 </style>
 </head>
 <body>
@@ -426,6 +464,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
         <ul class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn">
           <li role="none"><button class="lang-opt" role="menuitem" data-lang="en"><span aria-hidden="true">🇬🇧</span> English</button></li>
           <li role="none"><button class="lang-opt" role="menuitem" data-lang="fr"><span aria-hidden="true">🇫🇷</span> Français</button></li>
+          <li role="none"><button class="lang-opt" role="menuitem" data-lang="ar"><span aria-hidden="true">🇸🇾</span> العربية</button></li>
         </ul>
       </div>
       <button class="burger" id="burger" aria-expanded="false" aria-controls="navLinks" data-i18n-aria="nav.menu">
@@ -472,8 +511,8 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
         <p class="at" data-i18n="hero.card.at">TECHNICAL OFFICE ENGINEER  @ GTC</p>
         <div class="stats">
           <div class="stat"><b data-i18n="hero.stat1v">GTC</b><span data-i18n="hero.stat1">Current Role</span></div>
-          <div class="stat"><b>5+</b><span data-i18n="hero.stat2">Certs</span></div>
-          <div class="stat"><b>15+</b><span data-i18n="hero.stat3">Skills</span></div>
+          <div class="stat"><b dir="ltr">5</b><span data-i18n="hero.stat2">Certs</span></div>
+          <div class="stat"><b dir="ltr">3</b><span data-i18n="hero.stat3">Domains</span></div>
         </div>
       </article>
     </div>
@@ -495,7 +534,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
         <p class="quote" data-i18n="about.quote">I sit at the intersection of energy systems, automotive electronics and industrial manufacturing.</p>
         <p data-i18n="about.p1">I hold a Master’s degree in Electromechanics Engineering from the University of Science and Technology of Oran Mohamed Boudiaf (USTO-MB), where my thesis focused on optimising an energy management system for a hybrid microgrid combining photovoltaic panels, wind turbines, battery storage and electric vehicles.</p>
         <p data-i18n="about.p2">My hands-on experience spans CNC machining on a CTX Beta 1250 TC at CRTI’s SMRIS platform, FDM 3D printing and laser cutting, ECU memory programming and automotive diagnostics through TEKWIN Center, and on-site construction supervision as a field engineer.</p>
-        <p data-i18n="about.p3">I currently work at GTC in a technical office engineer supporting internal operations and coordination. I’m a persistent self-learner — C++, microprocessor architecture, PC building and embedded systems all came from my own study — and I’m open to new opportunities, including relocation.</p>
+        <p data-i18n="about.p3">I currently work at GTC as a technical office engineer, supporting internal operations and coordination. I’m a persistent self-learner — C++, microprocessor architecture, PC building and embedded systems all came from my own study — and I’m open to new opportunities, including relocation.</p>
       </article>
       <div class="values">
         <article class="value rv rv-r"><p class="ic" aria-hidden="true">⚙️</p><h3 data-i18n="val1.t">Multi-Domain Engineering</h3><p data-i18n="val1.d">Mechanical, electrical and electronic systems treated as one problem.</p></article>
@@ -506,6 +545,25 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
     </div>
   </div>
 </section>
+
+<section class="sec" id="looking" aria-label="What I am looking for">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="eyebrow" data-i18n="look.eyebrow">Next step</p>
+      <h2 class="sec-title" data-i18n="look.title">What I’m looking for</h2>
+    </header>
+    <div class="look-grid">
+      <div class="value rv"><p class="look-i" aria-hidden="true">💼</p><h3 data-i18n="look.c1t">Jobs</h3><p data-i18n="look.c1d">Engineering roles in energy systems, automotive electronics or industrial manufacturing — field, technical office or R&amp;D.</p></div>
+      <div class="value rv" style="transition-delay:.08s"><p class="look-i" aria-hidden="true">🎓</p><h3 data-i18n="look.c2t">Study</h3><p data-i18n="look.c2d">Funded Master’s and PhD positions and scholarships in energy systems and electromechanical engineering.</p></div>
+      <div class="value rv" style="transition-delay:.16s"><p class="look-i" aria-hidden="true">🌍</p><h3 data-i18n="look.c3t">Format &amp; place</h3><p data-i18n="look.c3d">On-site or remote. Open to relocation, in Algeria or abroad.</p></div>
+    </div>
+    <div class="look-learn rv">
+      <h3 data-i18n="learn.t">Currently learning</h3>
+      <div class="chips"><span class="chip" data-i18n="learn.1">Generative AI</span><span class="chip" data-i18n="learn.2">Model Context Protocol</span><span class="chip" data-i18n="learn.3">Business communication</span><span class="chip" data-i18n="learn.4">Presentation skills</span></div>
+    </div>
+  </div>
+</section>
+<style>.look-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.look-i{font-size:1.8rem;margin:0 0 .5rem}.value h3{margin:0 0 .4rem}.look-learn{margin-top:1.8rem}.look-learn h3{font-size:.95rem;margin:0 0 .8rem}@media(max-width:768px){.look-grid{grid-template-columns:1fr}}</style>
 
 <section class="sec" id="skills" aria-label="Skills and technologies">
   <div class="wrap">
@@ -585,13 +643,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
         </ul>
         <div class="tags"><span class="tag t-p" data-i18n="job5.g1">Coaching</span><span class="tag t-c" data-i18n="job5.g2">Equipment Maintenance</span></div>
       </article>
-      <article class="job rv">
-        <span class="node" aria-hidden="true"></span>
-        <div class="job-top"><h3 data-i18n="job6.t">Various Temporary Jobs</h3><span class="when" data-i18n="job6.d">2023</span></div>
-        <p class="where" data-i18n="job6.c">Oran, Algeria</p>
-        <ul><li data-i18n="job6.b1">Built teamwork, communication, and responsibility skills.</li></ul>
-        <div class="tags"><span class="tag t-p" data-i18n="job6.g1">Teamwork</span><span class="tag t-c" data-i18n="job6.g2">Communication</span></div>
-      </article>
+      
     </div>
   </div>
 </section>
@@ -618,7 +670,21 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
           <p data-i18n="th.c3d">The simulated management strategy improved system efficiency and operational reliability, keeping the load served while reducing cost and easing stress on storage. The work formed the basis of my Master’s degree, awarded in 2025.</p>
         </div>
       </div>
-      <div class="thesis-tools">
+      <div class="th-params rv"><h3 class="sub-h" data-i18n="th.par.t">Simulated system</h3><div class="chips">
+<span class="chip" data-i18n="th.p1">Wind farm 150 kW</span><span class="chip" data-i18n="th.p2">PV park 100 kW + residential PV 38 kW</span><span class="chip" data-i18n="th.p3">Loads: commercial 150 kW, residential 53 kW</span><span class="chip" data-i18n="th.p4">BESS 180 kWh (SOC 20–95 %)</span><span class="chip" data-i18n="th.p5">V2G stations 240 kW (30 kW each)</span><span class="chip" data-i18n="th.p6">EVs 352 kWh (44 kWh each)</span><span class="chip" data-i18n="th.p7">24 h simulation, phasor mode</span>
+</div></div>
+<div class="th-diag rv"><figure class="fig-wide"><a href="images/thesis-system.png" target="_blank" rel="noopener"><img src="images/thesis-system.png" alt="Microgrid architecture: grid, wind farm, PV parks, V2G station, BESS, commercial and residential loads" loading="lazy"></a><figcaption data-i18n="th.fig0">Simulated microgrid: grid connection (66 kV / 6.6 kV), wind farm, main PV park, commercial load, V2G station (6.6 kV / 600 V) and a residential feeder (6.6 kV / 240 V) with BESS, residential PV and houses.</figcaption></figure></div>
+<style>.th-diag{margin-top:2rem}.fig-wide{margin:0}.fig-wide img{width:100%;height:auto;background:#fff;border-radius:12px;display:block}.fig-wide figcaption{font-size:.82rem;opacity:.8;margin-top:.5rem}</style>
+<div class="th-figs rv"><h3 class="sub-h" data-i18n="th.fig.t">Simulation results</h3>
+<div class="fig-grid">
+<figure><a href="images/thesis-power-flow.png" target="_blank" rel="noopener"><img src="images/thesis-power-flow.png" alt="Power flow over 24 hours: solar, wind, battery, grid and EV against total load" loading="lazy"></a><figcaption data-i18n="th.fig1">Power flow over 24 hours: solar, wind, battery, grid and EV charging/injection against the total load.</figcaption></figure>
+<figure><a href="images/thesis-incentive.png" target="_blank" rel="noopener"><img src="images/thesis-incentive.png" alt="Surplus energy for incentive, houses served and energy per house" loading="lazy"></a><figcaption data-i18n="th.fig2">Surplus energy available for incentives, number of houses served and energy per house over 24 hours.</figcaption></figure>
+<figure><a href="images/thesis-incentive-deficit.png" target="_blank" rel="noopener"><img src="images/thesis-incentive-deficit.png" alt="Deficit energy for incentive, houses and energy per house" loading="lazy"></a><figcaption data-i18n="th.fig2b">Energy deficit for incentives, number of houses and energy per house over 24 hours.</figcaption></figure>
+<figure><a href="images/thesis-ev-soc.png" target="_blank" rel="noopener"><img src="images/thesis-ev-soc.png" alt="State of charge of electric vehicles in three parking lots" loading="lazy"></a><figcaption data-i18n="th.fig3">State of charge of the electric vehicles in three parking lots over 24 hours.</figcaption></figure>
+</div></div>
+<p class="th-int"><b data-i18n="th.int.l">Research interests:</b> <span data-i18n="th.int">microgrids, energy management and optimization, renewable energy integration, electric vehicles and vehicle-to-grid.</span></p>
+<style>.th-figs{margin-top:2rem}.fig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.fig-grid figure{margin:0}.fig-grid img{width:100%;height:auto;background:#fff;border-radius:12px;display:block}.fig-grid figcaption{font-size:.82rem;opacity:.8;margin-top:.5rem}.th-int{margin-top:1.5rem}@media(max-width:768px){.fig-grid{grid-template-columns:1fr}}</style>
+<div class="thesis-tools">
         <h3 class="sub-h" data-i18n="th.tools">Tools &amp; components</h3>
         <div class="chips">
           <span class="chip p">MATLAB</span><span class="chip p">Simulink</span>
@@ -627,7 +693,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
           <span class="chip" data-i18n="th.bat">Battery Storage</span>
           <span class="chip" data-i18n="th.ev">Electric Vehicles</span>
         </div>
-        <a class="edu-pdf" href="certs/thesis.pdf" target="_blank" rel="noopener" style="margin-top:1.2rem" data-i18n="th.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:13px;height:13px;fill:currentColor;flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>Read Full Thesis (PDF)</a>
+        <a class="edu-pdf" href="certs/thesis.pdf" target="_blank" rel="noopener" style="margin-top:1.2rem"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:13px;height:13px;fill:currentColor;flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="th.pdf">Read Full Thesis (PDF)</span></a>
       </div>
     </article>
   </div>
@@ -677,15 +743,21 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <p class="sec-lead" data-i18n="ce.lead">Formal training from CRTI, TEKWIN Center and IEEE PES, plus online study.</p>
     </header>
     <div class="grid3">
-      <article class="cert c-p rv"><h3 data-i18n="c1.t">FDM 3D Printing Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c1.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-fdm-3d-printing.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
-      <article class="cert c-p rv" style="transition-delay:.08s"><h3 data-i18n="c2.t">Laser Cutting Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c2.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-laser-cutting.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
-      <article class="cert c-c rv" style="transition-delay:.16s"><h3 data-i18n="c3.t">Automobile Memory Programming</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c3.d">12–17 July 2025</p><a class="cert-pdf" href="certs/tekwin-memory-programming.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
-      <article class="cert c-c rv" style="transition-delay:.24s"><h3 data-i18n="c4.t">Automobile Scanner Course</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c4.d">27–31 July 2025</p><a class="cert-pdf" href="certs/tekwin-scanner.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
-      <article class="cert c-a rv" style="transition-delay:.32s"><h3 data-i18n="c5.t">The Role of HVDC and Power Electronics in the Future Smart Electric Grid</h3><p class="org">IEEE Power &amp; Energy Society (PES)</p><p class="date" data-i18n="c5.d">24 February 2025</p><a class="cert-pdf" href="certs/ieee-pes-hvdc.pdf" target="_blank" rel="noopener" data-i18n="ce.view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Certificate</a></article>
-      <article class="cert rv" style="transition-delay:.4s"><h3 data-i18n="c6.t">SolidWorks Design and 3D Modeling</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
-      <article class="cert rv" style="transition-delay:.48s"><h3 data-i18n="c7.t">MATLAB and Simulink for Energy Systems</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
-      <article class="cert rv" style="transition-delay:.56s"><h3 data-i18n="c8.t">Arduino and Microcontroller Basics</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
-      <article class="cert rv" style="transition-delay:.64s"><h3 data-i18n="c9.t">Embedded Systems and PLC Basics</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p><p class="date" data-i18n="ce.ongoing">Ongoing</p></article>
+      <article class="cert c-p rv"><h3 data-i18n="c1.t">FDM 3D Printing Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c1.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-fdm-3d-printing.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-p rv" style="transition-delay:.08s"><h3 data-i18n="c2.t">Laser Cutting Course</h3><p class="org">CRTI, Oran</p><p class="date" data-i18n="c2.d">4–5 November 2024</p><a class="cert-pdf" href="certs/crti-laser-cutting.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-c rv" style="transition-delay:.16s"><h3 data-i18n="c3.t">Automobile Memory Programming</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c3.d">12–17 July 2025</p><a class="cert-pdf" href="certs/tekwin-memory-programming.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-c rv" style="transition-delay:.24s"><h3 data-i18n="c4.t">Automobile Scanner Course</h3><p class="org">TEKWIN Center</p><p class="date" data-i18n="c4.d">27–31 July 2025</p><a class="cert-pdf" href="certs/tekwin-scanner.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-a rv" style="transition-delay:.32s"><h3 data-i18n="c5.t">The Role of HVDC and Power Electronics in the Future Smart Electric Grid</h3><p class="org">IEEE Power &amp; Energy Society (PES)</p><p class="date" data-i18n="c5.d">24 February 2025</p><a class="cert-pdf" href="certs/ieee-pes-hvdc.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert rv" style="transition-delay:.4s"><h3 data-i18n="c6.t">SolidWorks Design and 3D Modeling</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p></article>
+      <article class="cert rv" style="transition-delay:.48s"><h3 data-i18n="c7.t">MATLAB and Simulink for Energy Systems</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p></article>
+      <article class="cert rv" style="transition-delay:.56s"><h3 data-i18n="c8.t">Arduino and Microcontroller Basics</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p></article>
+      <article class="cert rv" style="transition-delay:.64s"><h3 data-i18n="c9.t">Embedded Systems and PLC Basics</h3><p class="org" data-i18n="ce.online">Online &amp; self-study</p></article>
+      <article class="cert c-a rv" style="transition-delay:.72s"><h3 data-i18n="c10.t">Introduction to Generative AI</h3><p class="org">Google Cloud</p><p class="date" data-i18n="c10.d">October 17, 2026</p><a class="cert-pdf" href="https://www.skills.google/public_profiles/9a648fa4-bb61-4265-9501-93d521eea9f5/badges/28934486" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg><span data-i18n="ce.viewBadge">View Badge</span></a></article>
+      <article class="cert c-p rv" style="transition-delay:.8s"><h3 data-i18n="c11.t">Claude 101</h3><p class="org">Claude Academy</p><p class="date" data-i18n="c11.d">October 17, 2026</p><a class="cert-pdf" href="https://academy.claude.com/verify/872fc1386a0189b54b012ad9ac831887" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg><span data-i18n="ce.viewBadge">View Badge</span></a></article>
+      <article class="cert c-c rv" style="transition-delay:.88s"><h3 data-i18n="c12.t">Business Communications</h3><p class="org">HP LIFE / HP Foundation</p><p class="date" data-i18n="c12.d">October 18, 2026</p><a class="cert-pdf" href="certs/hp-life-business-comms.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-p rv" style="transition-delay:.96s"><h3 data-i18n="c13.t">Introduction to Model Context Protocol</h3><p class="org">Claude Academy</p><p class="date" data-i18n="c13.d">October 18, 2026</p><a class="cert-pdf" href="https://academy.claude.com/verify/3fca8acd8b9865d4c9e3d58f135f359e" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg><span data-i18n="ce.viewBadge">View Badge</span></a></article>
+      <article class="cert c-c rv" style="transition-delay:1.04s"><h3 data-i18n="c14.t">Effective Presentations</h3><p class="org">HP LIFE / HP Foundation</p><p class="date" data-i18n="c14.d">October 18, 2026</p><a class="cert-pdf" href="certs/hp-life-effective-presentations.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
+      <article class="cert c-a rv" style="transition-delay:1.12s"><h3 data-i18n="c15.t">EF SET English Certificate — C2 (76/100)</h3><p class="org" data-i18n="c15.o">EF SET — reading &amp; listening</p><p class="date" data-i18n="c15.d">October 21, 2026</p><a class="cert-pdf" href="https://cert.efset.org/bohiRT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.view">View Certificate</span></a></article>
     </div>
   </div>
 </section>
@@ -701,7 +773,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <div>
         <h3 data-i18n="ed1.t">Master’s Degree in Electromechanics Engineering</h3>
         <p><b data-i18n="ed1.i">University of Science and Technology of Oran Mohamed Boudiaf (USTO-MB)</b><br><span data-i18n="ed1.l">Oran, Algeria</span></p>
-        <a class="edu-pdf" href="certs/masters-degree.pdf" target="_blank" rel="noopener" data-i18n="ce.viewDiploma"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Diploma</a>
+        <a class="edu-pdf" href="certs/masters-degree.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.viewDiploma">View Diploma</span></a>
       </div>
     </article>
     <article class="edu rv rv-l" style="transition-delay:.12s">
@@ -709,7 +781,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <div>
         <h3 data-i18n="ed2.t">Secondary School Diploma (Baccalaureate)</h3>
         <p><b data-i18n="ed2.i">Ahmed Mehsas High School</b><br><span data-i18n="ed2.l">Oran, Algeria</span></p>
-        <a class="edu-pdf" href="certs/baccalaureate.pdf" target="_blank" rel="noopener" data-i18n="ce.viewDiploma"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg>View Diploma</a>
+        <a class="edu-pdf" href="certs/baccalaureate.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h3v1.5H8V10z"/></svg><span data-i18n="ce.viewDiploma">View Diploma</span></a>
       </div>
     </article>
   </div>
@@ -723,7 +795,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
     </header>
     <div class="grid4">
       <article class="lang-card rv"><span class="flag" aria-hidden="true">🇸🇾</span><div><h3 data-i18n="lg1.t">Arabic</h3><span class="pill p-p" data-i18n="lg1.p">Native</span></div></article>
-      <article class="lang-card rv" style="transition-delay:.1s"><span class="flag" aria-hidden="true">🇬🇧</span><div><h3 data-i18n="lg2.t">English</h3><span class="pill p-c">B2–C1</span></div></article>
+      <article class="lang-card rv" style="transition-delay:.1s"><span class="flag" aria-hidden="true">🇬🇧</span><div><h3 data-i18n="lg2.t">English</h3><span class="pill p-c">C2</span></div></article>
       <article class="lang-card rv" style="transition-delay:.2s"><span class="flag" aria-hidden="true">🇫🇷</span><div><h3 data-i18n="lg3.t">French</h3><span class="pill p-a">A2</span></div></article>
       <article class="lang-card rv" style="transition-delay:.3s"><span class="flag" aria-hidden="true">🇩🇪</span><div><h3 data-i18n="lg4.t">German</h3><span class="pill p-m">A2</span></div></article>
     </div>
@@ -740,7 +812,7 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
       <div class="rv rv-l">
         <a class="info" href="mailto:murshedalkasem@gmail.com">
           <span class="ic" aria-hidden="true">✉️</span>
-          <span><span data-i18n="ct.email">Email</span><b>murshedalkasem@gmail.com</b></span>
+          <span><span data-i18n="ct.email">Email</span><b dir="ltr">murshedalkasem@gmail.com</b></span>
         </a>
         <a class="info" href="tel:+213553975864">
           <span class="ic" aria-hidden="true">📱</span>
@@ -799,16 +871,16 @@ transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background 
 <script>
 "use strict";
 /* ====================== i18n dictionaries ====================== */
-var I18N = {en:{},fr:{}};
+var I18N = {en:{},fr:{},ar:{}};
 I18N.en = {
 "load.sub":"Electromechanics Engineer","load.a11y":"Loading portfolio",
 "nav.about":"About","nav.skills":"Skills","nav.exp":"Experience","nav.thesis":"Thesis","nav.projects":"Projects","nav.certs":"Certifications","nav.edu":"Education","nav.contact":"Contact",
 "nav.menu":"Toggle navigation menu","lang.switch":"Change language",
-"hero.badge":"Open to opportunities — open to relocation","hero.hi":"Hello, I’m",
+"hero.badge":"Open to jobs, scholarships & Master’s/PhD — on-site or remote","hero.hi":"Hello, I’m",
 "hero.role":"Electromechanics Engineer · Energy Systems & Automotive Electronics",
-"hero.bio":"Master’s graduate in Electromechanics Engineering from USTO-MB, Oran, working across energy systems, automotive diagnostics and industrial manufacturing. I build, simulate and optimise — from hybrid microgrids in MATLAB to CNC machining and ECU programming on the shop floor.",
+"hero.bio":"Master’s graduate in electromechanical engineering, working across energy systems, automotive diagnostics and industrial manufacturing.",
 "hero.cv":"Download CV","hero.contact":"Contact Me","hero.card.at":"TECHNICAL OFFICE ENGINEER @ GTC",
-"hero.stat1":"Current Role","hero.stat1v":"GTC","hero.stat2":"Certs","hero.stat3":"Skills",
+"hero.stat1":"Current Role","hero.stat1v":"GTC","hero.stat2":"Technical certs","hero.stat3":"Domains",
 "about.eyebrow":"About","about.title":"An engineer who works across the whole stack of hardware","about.lead":"From simulation models to the machines on the factory floor.",
 "about.quote":"I sit at the intersection of energy systems, automotive electronics and industrial manufacturing.",
 "about.p1":"I hold a Master’s degree in Electromechanics Engineering from the University of Science and Technology of Oran Mohamed Boudiaf (USTO-MB), where my thesis focused on optimising an energy management system for a hybrid microgrid combining photovoltaic panels, wind turbines, battery storage and electric vehicles.",
@@ -838,11 +910,11 @@ I18N.en = {
 "pr2.t":"Automotive ECU Diagnostics","pr2.d":"Certified training at TEKWIN Center in automobile memory programming and scanner-based diagnostics — reading, interpreting and reprogramming vehicle control units.","pr2.g1":"ECU Programming","pr2.g2":"Diagnostics","pr2.g3":"Automotive",
 "pr3.t":"CNC & Digital Manufacturing","pr3.d":"Operated a CTX Beta 1250 TC turning centre at CRTI’s SMRIS platform alongside FDM 3D printing and laser cutting work, plus mechanical assembly and electrical maintenance.","pr3.g1":"CNC","pr3.g2":"3D Printing","pr3.g3":"Laser Cutting",
 "ss1.t":"C++ Programming","ss1.d":"Self-taught to intermediate level.","ss2.t":"Microprocessors","ss2.d":"Structure and operation of microprocessors.","ss3.t":"PC Hardware","ss3.d":"Assembly, disassembly and component selection.","ss4.t":"Web Fundamentals","ss4.d":"HTML basics and how the web works.",
-"ce.eyebrow":"Certifications","ce.title":"Courses & credentials","ce.lead":"Formal training from CRTI, TEKWIN Center and IEEE PES, plus online study.","ce.online":"Online & self-study","ce.ongoing":"Ongoing","ce.view":"View Certificate","ce.viewDiploma":"View Diploma",
+"ce.eyebrow":"Certifications","ce.title":"Courses & credentials","ce.lead":"Formal training from CRTI, TEKWIN Center and IEEE PES, plus online courses from Google Cloud, Claude Academy and HP LIFE.","ce.online":"Online & self-study","ce.ongoing":"Ongoing","ce.view":"View Certificate","ce.viewDiploma":"View Diploma","ce.viewBadge":"View Badge",
 "c1.t":"FDM 3D Printing Course","c1.d":"4–5 November 2024","c2.t":"Laser Cutting Course","c2.d":"4–5 November 2024",
 "c3.t":"Automobile Memory Programming","c3.d":"12–17 July 2025","c4.t":"Automobile Scanner Course","c4.d":"27–31 July 2025",
 "c5.t":"The Role of HVDC and Power Electronics in the Future Smart Electric Grid","c5.d":"24 February 2025",
-"c6.t":"SolidWorks Design and 3D Modeling","c7.t":"MATLAB and Simulink for Energy Systems","c8.t":"Arduino and Microcontroller Basics","c9.t":"Embedded Systems and PLC Basics",
+"c6.t":"SolidWorks Design and 3D Modeling","c7.t":"MATLAB and Simulink for Energy Systems","c8.t":"Arduino and Microcontroller Basics","c9.t":"Embedded Systems and PLC Basics","c10.t":"Introduction to Generative AI","c10.d":"October 17, 2026","c11.t":"Claude 101","c11.d":"October 17, 2026","c12.t":"Business Communications","c12.d":"October 18, 2026","c13.t":"Introduction to Model Context Protocol","c13.d":"October 18, 2026","c14.t":"Effective Presentations","c14.d":"October 18, 2026",
 "ed.eyebrow":"Education","ed.title":"Academic background",
 "ed1.t":"Master’s Degree in Electromechanics Engineering","ed1.i":"University of Science and Technology of Oran Mohamed Boudiaf (USTO-MB)","ed1.l":"Oran, Algeria",
 "ed2.t":"Secondary School Diploma (Baccalaureate)","ed2.i":"Ahmed Mehsas High School","ed2.l":"Oran, Algeria",
@@ -853,7 +925,7 @@ I18N.en = {
 "ct.subject":"Subject","ct.subjectPh":"What’s this about?","ct.message":"Message","ct.msgPh":"Tell me about the role or project…",
 "ct.send":"Send Message","ct.note":"Your message goes directly to my inbox.",
 "ft.tag":"Electromechanics Engineer · Energy Systems, Automotive Electronics & Manufacturing","ft.rights":"© 2025 Mohamad Morshed Alkasem · Built from scratch in Oran, Algeria.",
-"top.label":"Back to top",
+"top.label":"Back to top","th.fig0":"Simulated microgrid: grid connection (66 kV / 6.6 kV), wind farm, main PV park, commercial load, V2G station (6.6 kV / 600 V) and a residential feeder (6.6 kV / 240 V) with BESS, residential PV and houses.","th.par.t":"Simulated system","th.p1":"Wind farm 150 kW","th.p2":"PV park 100 kW + residential PV 38 kW","th.p3":"Loads: commercial 150 kW, residential 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"V2G stations 240 kW (30 kW each)","th.p6":"EVs 352 kWh (44 kWh each)","th.p7":"24 h simulation, phasor mode","th.fig2b":"Energy deficit for incentives, number of houses and energy per house over 24 hours.","th.fig.t":"Simulation results","th.fig1":"Power flow over 24 hours: solar, wind, battery, grid and EV charging/injection against the total load.","th.fig2":"Surplus energy available for incentives, number of houses served and energy per house over 24 hours.","th.fig3":"State of charge of the electric vehicles in three parking lots over 24 hours.","th.int.l":"Research interests:","th.int":"microgrids, energy management and optimization, renewable energy integration, electric vehicles and vehicle-to-grid.","c15.t":"EF SET English Certificate — C2 (76/100)","c15.o":"EF SET — reading & listening","c15.d":"October 21, 2026","look.eyebrow":"Next step","look.title":"What I’m looking for","look.c1t":"Jobs","look.c1d":"Engineering roles in energy systems, automotive electronics or industrial manufacturing — field, technical office or R&D.","look.c2t":"Study","look.c2d":"Funded Master’s and PhD positions and scholarships in energy systems and electromechanical engineering.","look.c3t":"Format & place","look.c3d":"On-site or remote. Open to relocation, in Algeria or abroad.","learn.t":"Currently learning","learn.1":"Generative AI","learn.2":"Model Context Protocol","learn.3":"Business communication","learn.4":"Presentation skills",
 "meta.title":"Mohamad Morshed Alkasem — Electromechanics Engineer",
 "meta.desc":"Electromechanics engineer working across energy systems, automotive electronics and industrial manufacturing. Master’s graduate of USTO-MB, Oran. Open to opportunities."
 };
@@ -861,16 +933,16 @@ I18N.fr = {
 "load.sub":"Ingénieur en électromécanique","load.a11y":"Chargement du portfolio",
 "nav.about":"À propos","nav.skills":"Compétences","nav.exp":"Expérience","nav.thesis":"Mémoire","nav.projects":"Projets","nav.certs":"Certifications","nav.edu":"Formation","nav.contact":"Contact",
 "nav.menu":"Afficher le menu de navigation","lang.switch":"Changer de langue",
-"hero.badge":"Ouvert aux opportunités — disponible pour une mobilité","hero.hi":"Bonjour, je suis",
+"hero.badge":"Ouvert aux emplois, bourses et Master/Doctorat — sur site ou à distance","hero.hi":"Bonjour, je suis",
 "hero.role":"Ingénieur en électromécanique · Systèmes énergétiques & électronique automobile",
-"hero.bio":"Diplômé d’un master en génie électromécanique de l’USTO-MB à Oran, je travaille sur les systèmes énergétiques, le diagnostic automobile et la fabrication industrielle. Je conçois, simule et optimise — des micro-réseaux hybrides sous MATLAB à l’usinage CNC et à la programmation de calculateurs en atelier.",
-"hero.cv":"Télécharger le CV","hero.contact":"Me contacter","hero.card.at":"Poste au siège @ GTC",
-"hero.stat1":"Poste actuel","hero.stat1v":"GTC","hero.stat2":"Certifs","hero.stat3":"Compétences",
+"hero.bio":"Diplômé d’un Master en génie électromécanique, actif en systèmes énergétiques, diagnostic automobile et fabrication industrielle.",
+"hero.cv":"Télécharger le CV","hero.contact":"Me contacter","hero.card.at":"Ingénieur bureau technique @ GTC",
+"hero.stat1":"Poste actuel","hero.stat1v":"GTC","hero.stat2":"Certifs techniques","hero.stat3":"Domaines",
 "about.eyebrow":"À propos","about.title":"Un ingénieur qui maîtrise toute la chaîne du matériel","about.lead":"Des modèles de simulation jusqu’aux machines de l’atelier.",
 "about.quote":"Je travaille à la croisée des systèmes énergétiques, de l’électronique automobile et de la fabrication industrielle.",
 "about.p1":"Je suis titulaire d’un master en génie électromécanique de l’Université des Sciences et de la Technologie d’Oran Mohamed Boudiaf (USTO-MB), où mon mémoire portait sur l’optimisation d’un système de gestion de l’énergie pour un micro-réseau hybride associant panneaux photovoltaïques, éoliennes, stockage par batteries et véhicules électriques.",
 "about.p2":"Mon expérience de terrain couvre l’usinage CNC sur un CTX Beta 1250 TC à la plateforme SMRIS du CRTI, l’impression 3D FDM et la découpe laser, la programmation de mémoires de calculateurs et le diagnostic automobile au centre TEKWIN, ainsi que la supervision de chantiers comme ingénieur de terrain.",
-"about.p3":"Je travaille actuellement chez GTC à un poste au siège, en appui aux opérations internes et à la coordination. Je suis un autodidacte persévérant — le C++, l’architecture des microprocesseurs, le montage de PC et les systèmes embarqués viennent de mon propre travail — et je suis ouvert à de nouvelles opportunités, y compris une mobilité géographique.",
+"about.p3":"Je travaille actuellement chez GTC comme ingénieur au bureau technique, en appui aux opérations internes et à la coordination. Je suis un autodidacte persévérant — le C++, l’architecture des microprocesseurs, le montage de PC et les systèmes embarqués viennent de mon propre travail — et je suis ouvert à de nouvelles opportunités, y compris une mobilité géographique.",
 "val1.t":"Ingénierie multi-domaines","val1.d":"Les systèmes mécaniques, électriques et électroniques traités comme un seul problème.",
 "val2.t":"Recherche & simulation","val2.d":"Des modèles MATLAB et Simulink qui valident une conception avant sa réalisation.",
 "val3.t":"Fabrication pratique","val3.d":"Conduite de CNC, impression 3D, découpe laser et assemblage mécanique.",
@@ -878,7 +950,7 @@ I18N.fr = {
 "skills.eyebrow":"Compétences","skills.title":"Outils et savoir-faire","skills.lead":"Une maîtrise construite par les études, la certification et la pratique.",
 "skills.core":"Compétences clés","skills.tech":"Technologies & outils",
 "exp.eyebrow":"Expérience","exp.title":"Mon parcours professionnel","exp.lead":"Ingénierie de terrain, recherche, vente et coaching — chaque poste a compté.",
-"job1.t":"Poste au siège de l’entreprise","job1.d":"Octobre 2026 – aujourd’hui","job1.l":"· Algérie","job1.b1":"Affecté au siège de l’entreprise pour appuyer les opérations internes et la coordination.","job1.g1":"Opérations","job1.g2":"Coordination",
+"job1.t":"Ingénieur bureau technique","job1.d":"Octobre 2026 – aujourd’hui","job1.l":"· Algérie","job1.b1":"Affecté au bureau de l’entreprise pour appuyer les opérations internes et la coordination.","job1.g1":"Opérations","job1.g2":"Coordination",
 "job2.t":"Ingénieur de terrain","job2.d":"Avril 2026 – octobre 2026","job2.l":"· Algérie","job2.b1":"Supervision des activités de construction sur site.","job2.b2":"Coordination des opérations et des activités du chantier.","job2.b3":"Appui à la coordination des tâches de construction conformément aux exigences du projet.","job2.g1":"Supervision de chantier","job2.g2":"Construction","job2.g3":"Exigences projet",
 "job3.t":"Gérant de magasin","job3.d":"Décembre 2025 – avril 2026","job3.c":"Marché local <em>· Oran, Algérie</em>","job3.b1":"Gestion autonome des opérations quotidiennes du magasin.","job3.b2":"Traitement des ventes et service client.","job3.b3":"Organisation des marchandises et gestion de la disponibilité des produits.","job3.g1":"Gestion de magasin","job3.g2":"Vente","job3.g3":"Opérations",
 "job4.t":"Stagiaire ingénieur","job4.d":"22 déc. 2024 – 5 janv. 2025","job4.c":"CRTI — plateforme SMRIS <em>· Oran, Algérie</em>","job4.b1":"Conduite de la machine CNC CTX Beta 1250 TC.","job4.b2":"Participation à l’assemblage mécanique et à la maintenance électrique.","job4.b3":"Participation aux projets de recherche de la plateforme SMRIS.","job4.b4":"Attestation officielle de fin de stage obtenue.","job4.g1":"Usinage CNC","job4.g2":"Assemblage mécanique","job4.g3":"Recherche",
@@ -895,11 +967,11 @@ I18N.fr = {
 "pr2.t":"Diagnostic de calculateurs automobiles","pr2.d":"Formation certifiée au centre TEKWIN en programmation de mémoires automobiles et en diagnostic par valise — lecture, interprétation et reprogrammation des calculateurs de véhicules.","pr2.g1":"Programmation ECU","pr2.g2":"Diagnostic","pr2.g3":"Automobile",
 "pr3.t":"CNC & fabrication numérique","pr3.d":"Conduite d’un tour CTX Beta 1250 TC à la plateforme SMRIS du CRTI, avec de l’impression 3D FDM et de la découpe laser, ainsi que de l’assemblage mécanique et de la maintenance électrique.","pr3.g1":"CNC","pr3.g2":"Impression 3D","pr3.g3":"Découpe laser",
 "ss1.t":"Programmation C++","ss1.d":"Autodidacte jusqu’au niveau intermédiaire.","ss2.t":"Microprocesseurs","ss2.d":"Structure et fonctionnement des microprocesseurs.","ss3.t":"Matériel informatique","ss3.d":"Montage, démontage et choix des composants.","ss4.t":"Bases du web","ss4.d":"Bases du HTML et fonctionnement du web.",
-"ce.eyebrow":"Certifications","ce.title":"Formations & attestations","ce.lead":"Formations officielles du CRTI, du centre TEKWIN et de l’IEEE PES, complétées par de l’auto-formation.","ce.online":"En ligne & auto-formation","ce.ongoing":"En cours","ce.view":"Voir le certificat","ce.viewDiploma":"Voir le diplôme",
+"ce.eyebrow":"Certifications","ce.title":"Formations & attestations","ce.lead":"Formations officielles du CRTI, du centre TEKWIN et de l’IEEE PES, complétées par des cours en ligne de Google Cloud, Claude Academy et HP LIFE.","ce.online":"En ligne & auto-formation","ce.ongoing":"En cours","ce.view":"Voir le certificat","ce.viewDiploma":"Voir le diplôme","ce.viewBadge":"Voir le badge",
 "c1.t":"Formation impression 3D FDM","c1.d":"4–5 novembre 2024","c2.t":"Formation découpe laser","c2.d":"4–5 novembre 2024",
 "c3.t":"Programmation de mémoires automobiles","c3.d":"12–17 juillet 2025","c4.t":"Formation valise de diagnostic automobile","c4.d":"27–31 juillet 2025",
 "c5.t":"Le rôle du HVDC et de l’électronique de puissance dans le futur réseau électrique intelligent","c5.d":"24 février 2025",
-"c6.t":"Conception et modélisation 3D SolidWorks","c7.t":"MATLAB et Simulink pour les systèmes énergétiques","c8.t":"Bases d’Arduino et des microcontrôleurs","c9.t":"Bases des systèmes embarqués et des automates (API)",
+"c6.t":"Conception et modélisation 3D SolidWorks","c7.t":"MATLAB et Simulink pour les systèmes énergétiques","c8.t":"Bases d’Arduino et des microcontrôleurs","c9.t":"Bases des systèmes embarqués et des automates (API)","c10.t":"Introduction à l'IA générative","c10.d":"17 octobre 2026","c11.t":"Claude 101","c11.d":"17 octobre 2026","c12.t":"Communications professionnelles","c12.d":"18 octobre 2026","c13.t":"Introduction au Model Context Protocol","c13.d":"18 octobre 2026","c14.t":"Présentations efficaces","c14.d":"18 octobre 2026",
 "ed.eyebrow":"Formation","ed.title":"Parcours académique",
 "ed1.t":"Master en génie électromécanique","ed1.i":"Université des Sciences et de la Technologie d’Oran Mohamed Boudiaf (USTO-MB)","ed1.l":"Oran, Algérie",
 "ed2.t":"Baccalauréat de l’enseignement secondaire","ed2.i":"Lycée Ahmed Mehsas","ed2.l":"Oran, Algérie",
@@ -910,10 +982,70 @@ I18N.fr = {
 "ct.subject":"Objet","ct.subjectPh":"Quel est le sujet ?","ct.message":"Message","ct.msgPh":"Parlez-moi du poste ou du projet…",
 "ct.send":"Envoyer le message","ct.note":"Votre message arrive directement dans ma boîte mail.",
 "ft.tag":"Ingénieur en électromécanique · Systèmes énergétiques, électronique automobile & fabrication","ft.rights":"© 2025 Mohamad Morshed Alkasem · Conçu entièrement à la main à Oran, Algérie.",
-"top.label":"Retour en haut",
+"top.label":"Retour en haut","th.fig0":"Microréseau simulé : raccordement au réseau (66 kV / 6,6 kV), parc éolien, parc PV principal, charge commerciale, station V2G (6,6 kV / 600 V) et départ résidentiel (6,6 kV / 240 V) avec BESS, PV résidentiel et maisons.","th.par.t":"Système simulé","th.p1":"Parc éolien 150 kW","th.p2":"Parc PV 100 kW + PV résidentiel 38 kW","th.p3":"Charges : commerciale 150 kW, résidentielle 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"Stations V2G 240 kW (30 kW chacune)","th.p6":"VE 352 kWh (44 kWh chacun)","th.p7":"Simulation de 24 h, mode phaseur","th.fig2b":"Déficit d’énergie pour les incitations, nombre de maisons et énergie par maison sur 24 heures.","th.fig.t":"Résultats de simulation","th.fig1":"Flux de puissance sur 24 heures : solaire, éolien, batterie, réseau et charge/injection des véhicules électriques face à la charge totale.","th.fig2":"Surplus d’énergie disponible pour les incitations, nombre de maisons servies et énergie par maison sur 24 heures.","th.fig3":"État de charge des véhicules électriques dans trois parkings sur 24 heures.","th.int.l":"Axes de recherche :","th.int":"microréseaux, gestion et optimisation de l’énergie, intégration des énergies renouvelables, véhicules électriques et vehicle-to-grid.","c15.t":"Certificat d’anglais EF SET — C2 (76/100)","c15.o":"EF SET — compréhension écrite et orale","c15.d":"21 octobre 2026","look.eyebrow":"Prochaine étape","look.title":"Ce que je recherche","look.c1t":"Emploi","look.c1d":"Postes d’ingénieur en systèmes énergétiques, électronique automobile ou fabrication industrielle — terrain, bureau technique ou R&D.","look.c2t":"Études","look.c2d":"Master et doctorat financés, et bourses, en systèmes énergétiques et génie électromécanique.","look.c3t":"Format et lieu","look.c3d":"Sur site ou à distance. Prêt à déménager, en Algérie ou à l’étranger.","learn.t":"En cours d’apprentissage","learn.1":"IA générative","learn.2":"Model Context Protocol","learn.3":"Communication professionnelle","learn.4":"Prise de parole et présentations",
 "meta.title":"Mohamad Morshed Alkasem — Ingénieur en électromécanique",
 "meta.desc":"Ingénieur en électromécanique intervenant sur les systèmes énergétiques, l’électronique automobile et la fabrication industrielle. Diplômé d’un master de l’USTO-MB, Oran. Ouvert aux opportunités."
 };
+I18N.ar = {
+"load.sub":"مهندس كهروميكانيك","load.a11y":"جارٍ تحميل معرض الأعمال",
+"nav.about":"نبذة","nav.skills":"المهارات","nav.exp":"الخبرة","nav.thesis":"المذكرة","nav.projects":"المشاريع","nav.certs":"الشهادات","nav.edu":"التعليم","nav.contact":"تواصل",
+"nav.menu":"تبديل قائمة التنقل","lang.switch":"تغيير اللغة",
+"hero.badge":"منفتح على الوظائف والمنح والماستر/الدكتوراه — حضورياً أو عن بُعد","hero.hi":"مرحباً، أنا",
+"hero.role":"مهندس كهروميكانيك · أنظمة الطاقة وإلكترونيات السيارات",
+"hero.bio":"خريج ماستر في هندسة الكهروميكانيك، أعمل في أنظمة الطاقة وتشخيص السيارات والتصنيع الصناعي.",
+"hero.cv":"تحميل السيرة الذاتية","hero.contact":"تواصل معي","hero.card.at":"مهندس مكتب تقني @ GTC",
+"hero.stat1":"المنصب الحالي","hero.stat1v":"GTC","hero.stat2":"شهادات تقنية","hero.stat3":"مجالات",
+"about.eyebrow":"نبذة","about.title":"مهندس يتقن منظومة العتاد من أولها إلى آخرها","about.lead":"من نماذج المحاكاة إلى الآلات في أرضية المصنع.",
+"about.quote":"أعمل عند تقاطع أنظمة الطاقة وإلكترونيات السيارات والتصنيع الصناعي.",
+"about.p1":"أحمل شهادة ماستر في هندسة الكهروميكانيك من جامعة العلوم والتكنولوجيا وهران محمد بوضياف (USTO‑MB)، حيث تناولت مذكرتي تحسين نظام إدارة الطاقة في شبكة صغيرة هجينة تجمع بين الألواح الكهروضوئية وتوربينات الرياح وتخزين البطاريات والمركبات الكهربائية.",
+"about.p2":"تشمل خبرتي العملية التشغيل على آلة CNC من طراز CTX Beta 1250 TC في منصة SMRIS التابعة لمركز CRTI، والطباعة ثلاثية الأبعاد بتقنية FDM والقطع بالليزر، وبرمجة ذاكرة وحدات التحكم والتشخيص الآلي للسيارات عبر مركز TEKWIN، والإشراف الميداني على أعمال البناء بصفة مهندس ميداني.",
+"about.p3":"أعمل حالياً في GTC بصفة مهندس مكتب تقني، أدعم العمليات الداخلية والتنسيق. أنا متعلّم ذاتي مثابر — فقد تعلمت C++ وبنية المعالجات وتجميع الحواسيب والأنظمة المدمجة بجهدي الشخصي — وأنا منفتح على فرص جديدة، بما فيها الانتقال إلى مدينة أو بلد آخر.",
+"val1.t":"هندسة متعددة التخصصات","val1.d":"الأنظمة الميكانيكية والكهربائية والإلكترونية تُعالَج كمسألة واحدة.",
+"val2.t":"البحث والمحاكاة","val2.d":"نماذج MATLAB وSimulink تُثبت صحة التصميم قبل تنفيذه.",
+"val3.t":"التصنيع العملي","val3.d":"تشغيل آلات CNC والطباعة ثلاثية الأبعاد والقطع بالليزر والتجميع الميكانيكي.",
+"val4.t":"التعلّم المستمر","val4.d":"أدوات ولغات جديدة اكتسبتها بدراسة ذاتية منهجية.",
+"skills.eyebrow":"المهارات","skills.title":"الأدوات والقدرات","skills.lead":"كفاءة بُنيت عبر الدراسة والشهادات والممارسة.",
+"skills.core":"الكفاءات الأساسية","skills.tech":"التقنيات والأدوات",
+"exp.eyebrow":"الخبرة","exp.title":"أين عملت","exp.lead":"هندسة ميدانية وبحث وتجارة وتدريب — وكل تجربة أضافت لي شيئاً.",
+"job1.t":"مهندس مكتب تقني","job1.d":"أكتوبر 2026 – الآن","job1.l":"· الجزائر","job1.b1":"مُعيَّن في مكتب الشركة لدعم العمليات الداخلية والتنسيق.","job1.g1":"العمليات","job1.g2":"التنسيق",
+"job2.t":"مهندس ميداني","job2.d":"أبريل 2026 – أكتوبر 2026","job2.l":"· الجزائر","job2.b1":"الإشراف على أعمال البناء في الموقع.","job2.b2":"تنسيق عمليات الموقع وأنشطة العمل.","job2.b3":"دعم تنسيق مهام البناء بما يتوافق مع متطلبات المشروع.","job2.g1":"الإشراف على الموقع","job2.g2":"البناء","job2.g3":"متطلبات المشروع",
+"job3.t":"مدير متجر","job3.d":"ديسمبر 2025 – أبريل 2026","job3.c":"السوق المحلي <em>· وهران، الجزائر</em>","job3.b1":"إدارة العمليات اليومية للمتجر بشكل مستقل.","job3.b2":"إتمام عمليات البيع وخدمة الزبائن.","job3.b3":"تنظيم البضائع وضمان توفّر المنتجات.","job3.g1":"إدارة المتجر","job3.g2":"المبيعات","job3.g3":"العمليات",
+"job4.t":"متدرّب مهندس","job4.d":"22 ديسمبر 2024 – 5 يناير 2025","job4.c":"CRTI — منصة SMRIS <em>· وهران، الجزائر</em>","job4.b1":"تشغيل آلة CNC من طراز CTX Beta 1250 TC.","job4.b2":"المساعدة في التجميع الميكانيكي والصيانة الكهربائية.","job4.b3":"المشاركة في المشاريع البحثية ضمن منصة SMRIS.","job4.b4":"الحصول على شهادة رسمية بإتمام التدريب.","job4.g1":"التشغيل بآلات CNC","job4.g2":"التجميع الميكانيكي","job4.g3":"البحث",
+"job5.t":"مدرّب رياضي","job5.d":"يوليو – سبتمبر 2024","job5.c":"قاعة رياضة محلية <em>· وهران، الجزائر</em>","job5.b1":"تدريب العملاء وتوجيه حصص التمرين.","job5.b2":"صيانة معدات القاعة وتشجيع عادات التدريب الآمن.","job5.g1":"التدريب","job5.g2":"صيانة المعدات",
+"job6.t":"وظائف مؤقتة متنوعة","job6.d":"2023","job6.c":"وهران، الجزائر","job6.b1":"تنمية مهارات العمل الجماعي والتواصل وتحمّل المسؤولية.","job6.g1":"العمل الجماعي","job6.g2":"التواصل",
+"th.eyebrow":"مذكرة الماستر","th.title":"تحسين نظام إدارة الطاقة في شبكة صغيرة هجينة",
+"th.sub":"USTO‑MB، وهران · 2025 — تصميم ومحاكاة نظام لإدارة الطاقة في شبكة صغيرة هجينة تدمج الألواح الكهروضوئية وتوربينات الرياح وتخزين البطاريات والمركبات الكهربائية.",
+"th.c1t":"المشكلة","th.c1d":"تعتمد الشبكة الصغيرة الهجينة على مصادر متقطعة — الشمس والرياح — بينما تلبّي منحنى طلب لا يتطابق مع الإنتاج. وتضيف البطاريات والمركبات الكهربائية سعة تخزين يمكن شحنها أو تفريغها، لذا يجب موازنة العرض والطلب والتكلفة باستمرار، لا تحديد أحجامها مرة واحدة.",
+"th.c2t":"المنهجية","th.c2d":"نمذجتُ المنظومة كاملةً في MATLAB وSimulink — حقل الألواح الكهروضوئية وتوربين الرياح وبنك البطاريات وشحن المركبات الكهربائية — ثم طوّرت خوارزميات تحسين توزّع الحمل على كل مصدر وفق قيود الحمل والتكلفة على امتداد دورة التشغيل.",
+"th.c3t":"النتيجة","th.c3d":"حسّنت استراتيجية الإدارة المحاكاة كفاءة المنظومة وموثوقية تشغيلها، مع الحفاظ على تلبية الحمل وخفض التكلفة وتخفيف الضغط على التخزين. وقد شكّل هذا العمل أساس شهادة الماستر التي نلتها عام 2025.",
+"th.tools":"الأدوات والمكوّنات","th.pdf":"قراءة المذكرة كاملة (PDF)","th.pv":"الألواح الكهروضوئية","th.wind":"توربينات الرياح","th.bat":"تخزين البطاريات","th.ev":"المركبات الكهربائية",
+"pr.eyebrow":"المشاريع","pr.title":"ما بنيته ودرستُه","pr.lead":"أعمال أكاديمية وتدريب معتمد ودراسة ذاتية.","pr.self":"مشاريع الدراسة الذاتية",
+"pr1.t":"إدارة الطاقة في شبكة صغيرة هجينة","pr1.d":"مذكرة الماستر: نظام إدارة طاقة محاكى يوازن بين الطاقة الكهروضوئية والرياح وتخزين البطاريات وحمل المركبات الكهربائية بخوارزميات تحسين مبنية في MATLAB وSimulink.","pr1.g":"التحسين",
+"pr2.t":"تشخيص وحدات التحكم في السيارات (ECU)","pr2.d":"تدريب معتمد في مركز TEKWIN في برمجة ذاكرة السيارات والتشخيص بالجهاز الماسح — قراءة وحدات التحكم في المركبات وتفسيرها وإعادة برمجتها.","pr2.g1":"برمجة ECU","pr2.g2":"التشخيص","pr2.g3":"السيارات",
+"pr3.t":"CNC والتصنيع الرقمي","pr3.d":"تشغيل مخرطة CTX Beta 1250 TC في منصة SMRIS التابعة لـ CRTI إلى جانب الطباعة ثلاثية الأبعاد FDM والقطع بالليزر، مع التجميع الميكانيكي والصيانة الكهربائية.","pr3.g1":"CNC","pr3.g2":"الطباعة ثلاثية الأبعاد","pr3.g3":"القطع بالليزر",
+"ss1.t":"برمجة C++","ss1.d":"تعلّم ذاتي حتى المستوى المتوسط.","ss2.t":"المعالجات الدقيقة","ss2.d":"بنية المعالجات الدقيقة وطريقة عملها.","ss3.t":"عتاد الحاسوب","ss3.d":"التجميع والتفكيك واختيار المكوّنات.","ss4.t":"أساسيات الويب","ss4.d":"أساسيات HTML وطريقة عمل الويب.",
+"ce.eyebrow":"الشهادات","ce.title":"الدورات والاعتمادات","ce.lead":"تدريب رسمي من CRTI ومركز TEKWIN وIEEE PES، إضافةً إلى دورات عبر الإنترنت من Google Cloud وClaude Academy وHP LIFE.","ce.online":"عبر الإنترنت ودراسة ذاتية","ce.ongoing":"مستمر","ce.view":"عرض الشهادة","ce.viewDiploma":"عرض الدبلوم","ce.viewBadge":"عرض الشارة",
+"c1.t":"دورة الطباعة ثلاثية الأبعاد FDM","c1.d":"4–5 نوفمبر 2024","c2.t":"دورة القطع بالليزر","c2.d":"4–5 نوفمبر 2024",
+"c3.t":"برمجة ذاكرة السيارات","c3.d":"12–17 يوليو 2025","c4.t":"دورة جهاز المسح والتشخيص للسيارات","c4.d":"27–31 يوليو 2025",
+"c5.t":"دور HVDC وإلكترونيات القدرة في الشبكة الكهربائية الذكية المستقبلية","c5.d":"24 فبراير 2025",
+"c6.t":"التصميم والنمذجة ثلاثية الأبعاد بـ SolidWorks","c7.t":"MATLAB وSimulink لأنظمة الطاقة","c8.t":"أساسيات Arduino والمتحكمات الدقيقة","c9.t":"أساسيات الأنظمة المدمجة وPLC",
+"c10.t":"مقدمة في الذكاء الاصطناعي التوليدي","c10.d":"17 أكتوبر 2026","c11.t":"Claude 101","c11.d":"17 أكتوبر 2026","c12.t":"التواصل في بيئة الأعمال","c12.d":"18 أكتوبر 2026",
+"c13.t":"مقدمة في بروتوكول سياق النموذج (MCP)","c13.d":"18 أكتوبر 2026","c14.t":"العروض التقديمية الفعّالة","c14.d":"18 أكتوبر 2026",
+"ed.eyebrow":"التعليم","ed.title":"الخلفية الأكاديمية",
+"ed1.t":"شهادة الماستر في هندسة الكهروميكانيك","ed1.i":"جامعة العلوم والتكنولوجيا وهران محمد بوضياف (USTO‑MB)","ed1.l":"وهران، الجزائر",
+"ed2.t":"شهادة البكالوريا (التعليم الثانوي)","ed2.i":"ثانوية أحمد محساس","ed2.l":"وهران، الجزائر",
+"lg.eyebrow":"اللغات","lg.title":"اللغات التي أتحدثها","lg1.t":"العربية","lg1.p":"اللغة الأم","lg2.t":"الإنجليزية","lg3.t":"الفرنسية","lg4.t":"الألمانية",
+"ct.eyebrow":"تواصل","ct.title":"لنتحدث","ct.lead":"منفتح على الوظائف الهندسية وعلى الانتقال. أسرع وسيلة للتواصل معي هي البريد الإلكتروني.",
+"ct.email":"البريد الإلكتروني","ct.phone":"الهاتف","ct.loc":"الموقع","ct.locv":"وهران، الجزائر","ct.status":"الحالة","ct.statusv":"متاح للفرص — مستعد للانتقال",
+"ct.formTitle":"أرسل رسالة","ct.name":"الاسم","ct.namePh":"اسمك","ct.yourEmail":"البريد الإلكتروني","ct.emailPh":"you@example.com",
+"ct.subject":"الموضوع","ct.subjectPh":"ما موضوع رسالتك؟","ct.message":"الرسالة","ct.msgPh":"حدّثني عن الوظيفة أو المشروع…",
+"ct.send":"إرسال الرسالة","ct.note":"تصل رسالتك مباشرة إلى بريدي الوارد.",
+"ft.tag":"مهندس كهروميكانيك · أنظمة الطاقة وإلكترونيات السيارات والتصنيع","ft.rights":"© 2025 Mohamad Morshed Alkasem · صُمّم من الصفر في وهران، الجزائر.",
+"top.label":"العودة إلى الأعلى","th.fig0":"الشبكة الصغيرة المحاكاة: الربط بالشبكة (66 kV / 6.6 kV)، مزرعة الرياح، الحقل الكهروضوئي الرئيسي، الحمل التجاري، محطة V2G (6.6 kV / 600 V) وخط سكني (6.6 kV / 240 V) مع نظام التخزين BESS والطاقة الكهروضوئية السكنية والمنازل.","th.par.t":"المنظومة المحاكاة","th.p1":"مزرعة رياح 150 kW","th.p2":"حقل كهروضوئي 100 kW + كهروضوئي سكني 38 kW","th.p3":"الأحمال: تجارية 150 kW، سكنية 53 kW","th.p4":"نظام تخزين BESS بسعة 180 kWh (SOC بين 20 و95%)","th.p5":"محطات V2G بقدرة 240 kW (30 kW لكل محطة)","th.p6":"مركبات كهربائية 352 kWh (44 kWh لكل مركبة)","th.p7":"محاكاة لمدة 24 ساعة بالنمط الطوري (Phasor)","th.fig2b":"عجز الطاقة المخصص للحوافز وعدد المنازل والطاقة لكل منزل خلال 24 ساعة.","th.fig.t":"نتائج المحاكاة","th.fig1":"تدفق القدرة خلال 24 ساعة: الطاقة الشمسية والرياح والبطارية والشبكة وشحن/حقن المركبات الكهربائية مقابل الحمل الكلي.","th.fig2":"فائض الطاقة المتاح للحوافز وعدد المنازل المخدومة والطاقة لكل منزل خلال 24 ساعة.","th.fig3":"حالة شحن المركبات الكهربائية في ثلاثة مواقف خلال 24 ساعة.","th.int.l":"اهتمامات بحثية:","th.int":"الشبكات الصغيرة، إدارة الطاقة وتحسينها، دمج الطاقات المتجددة، المركبات الكهربائية والربط بين المركبة والشبكة (V2G).","c15.t":"شهادة الإنجليزية EF SET — C2 (76/100)","c15.o":"EF SET — القراءة والاستماع","c15.d":"21 أكتوبر 2026","look.eyebrow":"الخطوة التالية","look.title":"ما الذي أبحث عنه","look.c1t":"العمل","look.c1d":"وظائف هندسية في أنظمة الطاقة أو إلكترونيات السيارات أو التصنيع الصناعي — ميدانية أو مكتب تقني أو بحث وتطوير.","look.c2t":"الدراسة","look.c2d":"مناصب ماستر ودكتوراه ممولة ومنح دراسية في أنظمة الطاقة والهندسة الكهروميكانيكية.","look.c3t":"الصيغة والمكان","look.c3d":"حضورياً أو عن بُعد. مستعد للانتقال داخل الجزائر أو خارجها.","learn.t":"أتعلّمه حالياً","learn.1":"الذكاء الاصطناعي التوليدي","learn.2":"بروتوكول سياق النموذج (MCP)","learn.3":"التواصل في بيئة الأعمال","learn.4":"مهارات العرض والتقديم",
+"meta.title":"Mohamad Morshed Alkasem — مهندس كهروميكانيك",
+"meta.desc":"مهندس كهروميكانيك يعمل في أنظمة الطاقة وإلكترونيات السيارات والتصنيع الصناعي. خريج ماستر من USTO‑MB وهران. متاح للفرص."
+};
+
 /* ====================== data-driven content ====================== */
 var SKILLS = [
  {k:"MATLAB",v:85},{k:"SolidWorks",v:80},{k:"sk.cnc",v:78},{k:"sk.diag",v:78},
@@ -922,6 +1054,7 @@ var SKILLS = [
 ];
 var SKILL_LABELS = {
  en:{"sk.cnc":"CNC Machine Operation","sk.diag":"Automotive Diagnostics","sk.ecu":"ECU Programming","sk.fdm":"FDM 3D Printing","sk.pc":"PC Assembly & Maintenance","sk.solve":"Problem Solving"},
+ ar:{"sk.cnc":"تشغيل آلات CNC","sk.diag":"تشخيص السيارات","sk.ecu":"برمجة وحدات التحكم (ECU)","sk.fdm":"الطباعة ثلاثية الأبعاد FDM","sk.pc":"تجميع الحواسيب وصيانتها","sk.solve":"حل المشكلات"},
  fr:{"sk.cnc":"Conduite de machines CNC","sk.diag":"Diagnostic automobile","sk.ecu":"Programmation de calculateurs","sk.fdm":"Impression 3D FDM","sk.pc":"Montage & maintenance PC","sk.solve":"Résolution de problèmes"}
 };
 var TECH = [
@@ -933,9 +1066,10 @@ var TECH = [
 ];
 var TECH_LABELS = {
  en:{"tc.cnc":"CNC Operation","tc.ctx":"CTX Beta 1250 TC","tc.fdm":"FDM 3D Printing","tc.laser":"Laser Cutting","tc.ecu":"ECU Programming","tc.diag":"Automotive Diagnostics","tc.emb":"Embedded Systems","tc.plc":"PLC Basics","tc.pc":"PC Assembly & Maintenance","tc.solve":"Problem Solving","tc.learn":"Self-Learning & Research","tc.team":"Teamwork & Communication","tc.time":"Time Management"},
+ ar:{"tc.cnc":"تشغيل CNC","tc.ctx":"CTX Beta 1250 TC","tc.fdm":"الطباعة ثلاثية الأبعاد FDM","tc.laser":"القطع بالليزر","tc.ecu":"برمجة ECU","tc.diag":"تشخيص السيارات","tc.emb":"الأنظمة المدمجة","tc.plc":"أساسيات PLC","tc.pc":"تجميع الحواسيب وصيانتها","tc.solve":"حل المشكلات","tc.learn":"التعلّم الذاتي والبحث","tc.team":"العمل الجماعي والتواصل","tc.time":"إدارة الوقت"},
  fr:{"tc.cnc":"Conduite CNC","tc.ctx":"CTX Beta 1250 TC","tc.fdm":"Impression 3D FDM","tc.laser":"Découpe laser","tc.ecu":"Programmation ECU","tc.diag":"Diagnostic automobile","tc.emb":"Systèmes embarqués","tc.plc":"Bases des automates (API)","tc.pc":"Montage & maintenance PC","tc.solve":"Résolution de problèmes","tc.learn":"Auto-formation & recherche","tc.team":"Travail en équipe & communication","tc.time":"Gestion du temps"}
 };
-var MARQUEE = ["GTC","CRTI","USTO-MB","TEKWIN Center","IEEE PES","MATLAB","SolidWorks","CNC CTX Beta 1250 TC","FDM 3D Printing","Automotive Diagnostics","Hybrid Microgrid","Embedded Systems"];
+var MARQUEE = ["GTC","CRTI","USTO-MB","TEKWIN Center","IEEE PES","MATLAB","SolidWorks","CNC CTX Beta 1250 TC","FDM 3D Printing","Automotive Diagnostics","Hybrid Microgrid","Embedded Systems","Google Cloud","Claude Academy","HP LIFE"];
 
 /* ====================== helpers ====================== */
 function $(s,r){return (r||document).querySelector(s);}
@@ -980,12 +1114,15 @@ var LS_KEY="mma-lang";
 function store(k,v){try{localStorage.setItem(k,v);}catch(e){}}
 function read(k){try{return localStorage.getItem(k);}catch(e){return null;}}
 
+var SUPPORTED=["en","fr","ar"];
+var LOCALES={en:"en_US",fr:"fr_FR",ar:"ar_AR"};
+var FLAGS={en:"🇬🇧",fr:"🇫🇷",ar:"🇸🇾"};
 function resolveLang(){
  var p=null;
  try{p=new URLSearchParams(window.location.search).get("lang");}catch(e){}
- if(p){p=p.toLowerCase();if(p==="en"||p==="fr")return p;}
+ if(p){p=p.toLowerCase();if(SUPPORTED.indexOf(p)>-1)return p;}
  var s=read(LS_KEY);
- if(s==="en"||s==="fr")return s;
+ if(SUPPORTED.indexOf(s)>-1)return s;
  return "en";
 }
 function applyLang(lang,pushUrl){
@@ -1004,15 +1141,18 @@ function applyLang(lang,pushUrl){
   if(v!==undefined) el.setAttribute("aria-label",v);
  });
  document.documentElement.lang=lang;
+ document.documentElement.dir=(lang==="ar")?"rtl":"ltr";
+ var cvb=document.getElementById("cvBtn");
+ if(cvb){var fr=(lang==="fr");cvb.setAttribute("href",fr?"cv/CV2026-fr.pdf":"cv/CV2026.pdf");cvb.setAttribute("download",fr?"Mohamad_Morshed_Alkasem_CV_FR.pdf":"Mohamad_Morshed_Alkasem_CV.pdf");}
  if(dict["meta.title"]) document.title=dict["meta.title"];
  var md=$("#metaDesc"), ot=$("#ogTitle"), od=$("#ogDesc"), ol=$("#ogLocale");
  if(md&&dict["meta.desc"]) md.setAttribute("content",dict["meta.desc"]);
  if(ot&&dict["meta.title"]) ot.setAttribute("content",dict["meta.title"]);
  if(od&&dict["meta.desc"]) od.setAttribute("content",dict["meta.desc"]);
- if(ol) ol.setAttribute("content",lang==="fr"?"fr_FR":"en_US");
+ if(ol) ol.setAttribute("content",LOCALES[lang]||"en_US");
 
  var f=$("#langFlag"), c=$("#langCode");
- if(f) f.textContent=lang==="fr"?"🇫🇷":"🇬🇧";
+ if(f) f.textContent=FLAGS[lang]||"🇬🇧";
  if(c) c.textContent=lang.toUpperCase();
  $$(".lang-opt").forEach(function(b){
   b.setAttribute("aria-current",b.getAttribute("data-lang")===lang?"true":"false");
@@ -1241,40 +1381,34 @@ function observeBars(){
  var btn=document.getElementById("formSubmitBtn");
  var btnTxt=document.getElementById("formBtnTxt");
  var note=document.getElementById("formNote");
- var lang=document.documentElement.lang||"en";
  var msgs={
-  sending:{en:"Sending…",fr:"Envoi en cours…"},
-  ok:{en:"✓ Message sent! I'll get back to you soon.",fr:"✓ Message envoyé ! Je vous répondrai bientôt."},
-  err:{en:"✗ Something went wrong. Please email me directly.",fr:"✗ Une erreur s'est produite. Contactez-moi par email."}
+  sending:{en:"Sending…",fr:"Envoi en cours…",ar:"جارٍ الإرسال…"},
+  ok:{en:"✓ Message sent! I’ll get back to you soon.",fr:"✓ Message envoyé ! Je vous répondrai bientôt.",ar:"✓ تم إرسال الرسالة! سأردّ عليك قريباً."},
+  err:{en:"✗ Something went wrong. Please email me directly.",fr:"✗ Une erreur s’est produite. Contactez-moi par e-mail.",ar:"✗ حدث خطأ ما. يُرجى مراسلتي مباشرة عبر البريد الإلكتروني."}
  };
+ function L(){return document.documentElement.lang||"en";}
+ function m(k){return msgs[k][L()]||msgs[k].en;}
+ function resetBtn(){
+  btn.disabled=false;
+  btnTxt.textContent=(I18N[L()]&&I18N[L()]["ct.send"])||"Send Message";
+ }
  f.addEventListener("submit",function(e){
   e.preventDefault();
   if(!f.checkValidity()){f.reportValidity();return;}
   btn.disabled=true;
-  btnTxt.textContent=msgs.sending[lang]||msgs.sending.en;
-  note.style.display="none";
+  btnTxt.textContent=m("sending");
   fetch("https://formspree.io/f/xljgpvow",{
    method:"POST",
    headers:{"Accept":"application/json"},
    body:new FormData(f)
   }).then(function(r){
-   if(r.ok){
-    f.reset();
-    note.textContent=msgs.ok[lang]||msgs.ok.en;
-    note.style.color="var(--cyan)";
-   } else {
-    note.textContent=msgs.err[lang]||msgs.err.en;
-    note.style.color="var(--pink)";
-    btn.disabled=false;
-    btnTxt.textContent=(lang==="fr")?"Envoyer":"Send Message";
-   }
-   note.style.display="block";
+   if(r.ok){f.reset();note.textContent=m("ok");note.style.color="var(--cyan)";}
+   else{note.textContent=m("err");note.style.color="var(--pink)";}
   }).catch(function(){
-   note.textContent=msgs.err[lang]||msgs.err.en;
-   note.style.color="var(--pink)";
+   note.textContent=m("err");note.style.color="var(--pink)";
+  }).then(function(){
    note.style.display="block";
-   btn.disabled=false;
-   btnTxt.textContent=(lang==="fr")?"Envoyer":"Send Message";
+   resetBtn();
   });
  });
 })();
@@ -1286,7 +1420,7 @@ function observeBars(){
  applyLang(lang,true);
 
  var yr=new Date().getFullYear();
- ["en","fr"].forEach(function(l){
+ ["en","fr","ar"].forEach(function(l){
   if(I18N[l]&&I18N[l]["ft.rights"]) I18N[l]["ft.rights"]=I18N[l]["ft.rights"].replace("2025",yr);
  });
  var fr=$('[data-i18n="ft.rights"]');
@@ -1298,7 +1432,8 @@ function observeBars(){
   if(nav) nav.classList.add("in");
   setTimeout(function(){if(ld&&ld.parentNode) ld.parentNode.removeChild(ld);},900);
  }
- var delay=reduced?200:2200;
+ var seen=false;try{seen=sessionStorage.getItem("mma_seen")==="1";sessionStorage.setItem("mma_seen","1");}catch(e){}
+ var delay=(reduced||seen)?200:2200;
  if(document.readyState==="complete") setTimeout(finish,delay);
  else window.addEventListener("load",function(){setTimeout(finish,delay);});
  setTimeout(finish,5000); /* safety net if load never fires */
