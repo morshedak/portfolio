@@ -50,7 +50,7 @@ a{color:var(--cyan)}
 ::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--cyan),var(--pink))}
 /* ---------- background layers ---------- */
 #particles{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:-1}
 .blob-a{width:46vw;height:46vw;max-width:540px;max-height:540px;top:-8%;left:-10%;background:radial-gradient(circle,rgba(255,45,120,.5),transparent 70%);animation:drift 22s var(--ease) infinite alternate}
@@ -124,7 +124,7 @@ section{scroll-margin-top:78px}
 .eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--pink),var(--cyan))}
 .sec-title{margin:0 0 .7rem;font-size:clamp(1.85rem,4.4vw,2.9rem);font-weight:800;line-height:1.14}
 .sec-lead{margin:0;color:var(--muted);font-weight:300;font-size:1.02rem}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;}
 .grad-text{background:linear-gradient(95deg,var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;overflow:hidden}
@@ -233,7 +233,7 @@ transition:transform .28s var(--ease),color .28s ease,border-color .28s ease,bac
 background:linear-gradient(180deg,var(--pink),var(--cyan) 45%,var(--amber));background-size:100% 220%;animation:lineSlide 7s linear infinite}
 @keyframes lineSlide{to{background-position:0 220%}}
 .job{position:relative;margin-bottom:1.2rem;padding:1.5rem 1.6rem;border-radius:16px;overflow:hidden;
-background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+background:var(--surface);border:1px solid var(--line);
 transition:transform .35s var(--ease),border-color .35s ease,box-shadow .35s ease}
 .job::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;border-radius:3px;
 background:linear-gradient(180deg,var(--pink),var(--cyan));transform:scaleY(0);transform-origin:50% 0;transition:transform .4s var(--ease)}
@@ -257,7 +257,7 @@ background:linear-gradient(180deg,var(--pink),var(--cyan));transform:scaleY(0);t
 /* ---------- thesis ---------- */
 .thesis{position:relative;padding:3rem 2.4rem;border-radius:24px;overflow:hidden;
 background:linear-gradient(145deg,rgba(255,45,120,.1),rgba(26,10,60,.6) 42%,rgba(0,212,255,.1));
-border:1px solid rgba(240,238,255,.13);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+border:1px solid rgba(240,238,255,.13);}
 .thesis::before{content:"";position:absolute;top:-45%;right:-18%;width:400px;height:400px;border-radius:50%;filter:blur(80px);
 background:radial-gradient(circle,rgba(255,45,120,.28),transparent 70%);pointer-events:none}
 .thesis-title{position:relative;margin:.4rem 0 .5rem;font-size:clamp(1.5rem,3.6vw,2.3rem);font-weight:800;line-height:1.18;max-width:28ch}
@@ -276,7 +276,7 @@ background:radial-gradient(circle,rgba(255,45,120,.28),transparent 70%);pointer-
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:1.2rem}
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1rem}
 .proj{position:relative;padding:1.75rem 1.5rem;border-radius:18px;overflow:hidden;
-background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+background:var(--surface);border:1px solid var(--line);
 transition:transform .35s var(--ease),border-color .35s ease,box-shadow .35s ease}
 .proj::before{content:"";position:absolute;top:0;left:0;height:2px;width:100%;
 background:linear-gradient(90deg,var(--pink),var(--cyan),var(--amber));transform:translateX(-101%);transition:transform .6s var(--ease)}
@@ -292,7 +292,7 @@ background:linear-gradient(90deg,var(--pink),var(--cyan),var(--amber));transform
 .study p{margin:0;font-size:.79rem;color:var(--muted);font-weight:300;line-height:1.55}
 /* ---------- certifications ---------- */
 .cert{padding:1.4rem 1.35rem;border-radius:15px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--muted);
-backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s var(--ease),box-shadow .3s ease,background .3s ease}
+transition:transform .3s var(--ease),box-shadow .3s ease,background .3s ease}
 .cert:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 18px 40px rgba(0,0,0,.4)}
 .cert.c-p{border-left-color:var(--pink)}
 .cert.c-c{border-left-color:var(--cyan)}
@@ -308,7 +308,7 @@ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transfo
 .edu-pdf svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 /* ---------- education ---------- */
 .edu{display:flex;gap:1.3rem;align-items:flex-start;padding:1.6rem 1.5rem;border-radius:16px;background:var(--surface);border:1px solid var(--line);
-backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s var(--ease),border-color .3s ease}
+transition:transform .3s var(--ease),border-color .3s ease}
 .edu:hover{transform:translateX(9px);border-color:rgba(255,170,0,.4)}
 .yr{flex:0 0 auto;padding:.42rem .85rem;border-radius:99px;font-family:var(--hf);font-weight:700;font-size:.82rem;color:#2a1800;background:linear-gradient(95deg,var(--amber),#ff7a00)}
 .edu h3{margin:0 0 .3rem;font-size:1.02rem;font-weight:700;line-height:1.4}
@@ -316,7 +316,7 @@ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transfo
 .edu p b{color:var(--text);font-weight:500}
 /* ---------- languages ---------- */
 .lang-card{display:flex;align-items:center;gap:.9rem;padding:1.25rem 1.3rem;border-radius:15px;background:var(--surface);border:1px solid var(--line);
-backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s var(--ease),box-shadow .3s ease}
+transition:transform .3s var(--ease),box-shadow .3s ease}
 .lang-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(0,0,0,.42)}
 .flag{font-size:1.9rem;line-height:1}
 .lang-card h3{margin:0;font-size:.97rem;font-weight:700}
@@ -334,7 +334,7 @@ transition:transform .3s var(--ease),border-color .3s ease,background .3s ease}
 .info .ic{display:grid;place-content:center;flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:rgba(255,45,120,.13);font-size:1.05rem}
 .info span{display:block;font-size:.69rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .info b{font-weight:500;font-size:.93rem;word-break:break-word}
-form{margin-top:1.8rem;padding:1.7rem 1.6rem;border-radius:18px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+form{margin-top:1.8rem;padding:1.7rem 1.6rem;border-radius:18px;background:var(--surface);border:1px solid var(--line);}
 form h3{margin:0 0 1.2rem;font-size:1.04rem;font-weight:700}
 .field{margin-bottom:.95rem}
 .field label{display:block;margin-bottom:.35rem;font-size:.74rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -358,7 +358,7 @@ footer p{margin:0 0 .35rem;font-size:.86rem;color:var(--muted);font-weight:300}
 footer .fname{font-family:var(--hf);font-weight:700;font-size:1rem;color:var(--text)}
 /* ---------- back to top ---------- */
 #top{position:fixed;right:1.3rem;bottom:1.3rem;z-index:650;width:46px;height:46px;display:grid;place-content:center;
-border:1px solid rgba(0,212,255,.35);border-radius:50%;background:rgba(12,5,32,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(0,212,255,.35);border-radius:50%;background:rgba(12,5,32,.85);
 color:var(--cyan);font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(16px);
 transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background .25s ease}
 #top.show{opacity:1;visibility:visible;transform:translateY(0);animation:pulseRing 2.6s ease-out infinite}
@@ -610,17 +610,7 @@ html[dir="rtl"] input[type="email"]{direction:ltr;text-align:right}
         </ul>
         <div class="tags"><span class="tag t-p" data-i18n="job2.g1">Site Supervision</span><span class="tag t-c" data-i18n="job2.g2">Construction</span><span class="tag t-a" data-i18n="job2.g3">Project Requirements</span></div>
       </article>
-      <article class="job rv">
-        <span class="node" aria-hidden="true"></span>
-        <div class="job-top"><h3 data-i18n="job3.t">Store Manager</h3><span class="when" data-i18n="job3.d">December 2025 – April 2026</span></div>
-        <p class="where" data-i18n="job3.c">Local Market <em>· Oran, Algeria</em></p>
-        <ul>
-          <li data-i18n="job3.b1">Managed daily store operations independently.</li>
-          <li data-i18n="job3.b2">Handled product sales and customer service.</li>
-          <li data-i18n="job3.b3">Organized merchandise and managed product availability.</li>
-        </ul>
-        <div class="tags"><span class="tag t-p" data-i18n="job3.g1">Store Management</span><span class="tag t-c" data-i18n="job3.g2">Sales</span><span class="tag t-a" data-i18n="job3.g3">Operations</span></div>
-      </article>
+      
       <article class="job rv">
         <span class="node" aria-hidden="true"></span>
         <div class="job-top"><h3 data-i18n="job4.t">Engineering Intern</h3><span class="when" data-i18n="job4.d">22 Dec 2024 – 5 Jan 2025</span></div>
@@ -632,6 +622,17 @@ html[dir="rtl"] input[type="email"]{direction:ltr;text-align:right}
           <li data-i18n="job4.b4">Received official certificate of internship completion.</li>
         </ul>
         <div class="tags"><span class="tag t-p" data-i18n="job4.g1">CNC Machining</span><span class="tag t-c" data-i18n="job4.g2">Mechanical Assembly</span><span class="tag t-a" data-i18n="job4.g3">Research</span></div>
+      </article>
+      <h3 class="sub-h rv" data-i18n="exp.other" style="margin:1.5rem 0 1rem">Other experience</h3>
+      <article class="job rv">
+        <span class="node" aria-hidden="true"></span>
+        <div class="job-top"><h3 data-i18n="job3.t">Store Manager</h3><span class="when" data-i18n="job3.d">December 2025 – April 2026</span></div>
+        <p class="where" data-i18n="job3.c">Local Market <em>· Oran, Algeria</em></p>
+        <ul>
+          <li data-i18n="job3.b1">Managed daily store operations independently.</li>
+          <li data-i18n="job3.b2">Handled product sales and customer service.</li>
+        </ul>
+        <div class="tags"><span class="tag t-p" data-i18n="job3.g1">Store Management</span><span class="tag t-c" data-i18n="job3.g2">Sales</span><span class="tag t-a" data-i18n="job3.g3">Operations</span></div>
       </article>
       <article class="job rv">
         <span class="node" aria-hidden="true"></span>
@@ -895,7 +896,7 @@ I18N.en = {
 "exp.eyebrow":"Experience","exp.title":"Where I’ve worked","exp.lead":"Field engineering, research, retail and coaching — each one added something.",
 "job1.t":"Technical Office Engineer","job1.d":"October 2026 – Present","job1.l":"· Algeria","job1.b1":"Assigned to the company office to support internal operations and coordination.","job1.g1":"Operations","job1.g2":"Coordination",
 "job2.t":"Field Engineer","job2.d":"April 2026 – October 2026","job2.l":"· Algeria","job2.b1":"Supervised on-site construction activities.","job2.b2":"Coordinated site operations and work activities.","job2.b3":"Supported the coordination of construction tasks in line with project requirements.","job2.g1":"Site Supervision","job2.g2":"Construction","job2.g3":"Project Requirements",
-"job3.t":"Store Manager","job3.d":"December 2025 – April 2026","job3.c":"Local Market <em>· Oran, Algeria</em>","job3.b1":"Managed daily store operations independently.","job3.b2":"Handled product sales and customer service.","job3.b3":"Organized merchandise and managed product availability.","job3.g1":"Store Management","job3.g2":"Sales","job3.g3":"Operations",
+"job3.t":"Store Manager","job3.d":"December 2025 – April 2026","job3.c":"Local Market <em>· Oran, Algeria</em>","job3.b1":"Managed daily store operations independently.","job3.b2":"Handled sales and customer service, and managed product availability.","job3.b3":"Organized merchandise and managed product availability.","job3.g1":"Store Management","job3.g2":"Sales","job3.g3":"Operations",
 "job4.t":"Engineering Intern","job4.d":"22 Dec 2024 – 5 Jan 2025","job4.c":"CRTI — SMRIS Platform <em>· Oran, Algeria</em>","job4.b1":"Operated CNC machine CTX Beta 1250 TC.","job4.b2":"Assisted in mechanical assembly and electrical maintenance.","job4.b3":"Participated in research projects within the SMRIS platform.","job4.b4":"Received official certificate of internship completion.","job4.g1":"CNC Machining","job4.g2":"Mechanical Assembly","job4.g3":"Research",
 "job5.t":"Gym Coach","job5.d":"July – September 2024","job5.c":"Local Gym <em>· Oran, Algeria</em>","job5.b1":"Trained clients and guided workout sessions.","job5.b2":"Maintained gym equipment and promoted safe training habits.","job5.g1":"Coaching","job5.g2":"Equipment Maintenance",
 "job6.t":"Various Temporary Jobs","job6.d":"2023","job6.c":"Oran, Algeria","job6.b1":"Built teamwork, communication, and responsibility skills.","job6.g1":"Teamwork","job6.g2":"Communication",
@@ -925,7 +926,7 @@ I18N.en = {
 "ct.subject":"Subject","ct.subjectPh":"What’s this about?","ct.message":"Message","ct.msgPh":"Tell me about the role or project…",
 "ct.send":"Send Message","ct.note":"Your message goes directly to my inbox.",
 "ft.tag":"Electromechanics Engineer · Energy Systems, Automotive Electronics & Manufacturing","ft.rights":"© 2025 Mohamad Morshed Alkasem · Built from scratch in Oran, Algeria.",
-"top.label":"Back to top","th.fig0":"Simulated microgrid: grid connection (66 kV / 6.6 kV), wind farm, main PV park, commercial load, V2G station (6.6 kV / 600 V) and a residential feeder (6.6 kV / 240 V) with BESS, residential PV and houses.","th.par.t":"Simulated system","th.p1":"Wind farm 150 kW","th.p2":"PV park 100 kW + residential PV 38 kW","th.p3":"Loads: commercial 150 kW, residential 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"V2G stations 240 kW (30 kW each)","th.p6":"EVs 352 kWh (44 kWh each)","th.p7":"24 h simulation, phasor mode","th.fig2b":"Energy deficit for incentives, number of houses and energy per house over 24 hours.","th.fig.t":"Simulation results","th.fig1":"Power flow over 24 hours: solar, wind, battery, grid and EV charging/injection against the total load.","th.fig2":"Surplus energy available for incentives, number of houses served and energy per house over 24 hours.","th.fig3":"State of charge of the electric vehicles in three parking lots over 24 hours.","th.int.l":"Research interests:","th.int":"microgrids, energy management and optimization, renewable energy integration, electric vehicles and vehicle-to-grid.","c15.t":"EF SET English Certificate — C2 (76/100)","c15.o":"EF SET — reading & listening","c15.d":"October 21, 2026","look.eyebrow":"Next step","look.title":"What I’m looking for","look.c1t":"Jobs","look.c1d":"Engineering roles in energy systems, automotive electronics or industrial manufacturing — field, technical office or R&D.","look.c2t":"Study","look.c2d":"Funded Master’s and PhD positions and scholarships in energy systems and electromechanical engineering.","look.c3t":"Format & place","look.c3d":"On-site or remote. Open to relocation, in Algeria or abroad.","learn.t":"Currently learning","learn.1":"Generative AI","learn.2":"Model Context Protocol","learn.3":"Business communication","learn.4":"Presentation skills",
+"top.label":"Back to top","exp.other":"Other experience","th.fig0":"Simulated microgrid: grid connection (66 kV / 6.6 kV), wind farm, main PV park, commercial load, V2G station (6.6 kV / 600 V) and a residential feeder (6.6 kV / 240 V) with BESS, residential PV and houses.","th.par.t":"Simulated system","th.p1":"Wind farm 150 kW","th.p2":"PV park 100 kW + residential PV 38 kW","th.p3":"Loads: commercial 150 kW, residential 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"V2G stations 240 kW (30 kW each)","th.p6":"EVs 352 kWh (44 kWh each)","th.p7":"24 h simulation, phasor mode","th.fig2b":"Energy deficit for incentives, number of houses and energy per house over 24 hours.","th.fig.t":"Simulation results","th.fig1":"Power flow over 24 hours: solar, wind, battery, grid and EV charging/injection against the total load.","th.fig2":"Surplus energy available for incentives, number of houses served and energy per house over 24 hours.","th.fig3":"State of charge of the electric vehicles in three parking lots over 24 hours.","th.int.l":"Research interests:","th.int":"microgrids, energy management and optimization, renewable energy integration, electric vehicles and vehicle-to-grid.","c15.t":"EF SET English Certificate — C2 (76/100)","c15.o":"EF SET — reading & listening","c15.d":"October 21, 2026","look.eyebrow":"Next step","look.title":"What I’m looking for","look.c1t":"Jobs","look.c1d":"Engineering roles in energy systems, automotive electronics or industrial manufacturing — field, technical office or R&D.","look.c2t":"Study","look.c2d":"Funded Master’s and PhD positions and scholarships in energy systems and electromechanical engineering.","look.c3t":"Format & place","look.c3d":"On-site or remote. Open to relocation, in Algeria or abroad.","learn.t":"Currently learning","learn.1":"Generative AI","learn.2":"Model Context Protocol","learn.3":"Business communication","learn.4":"Presentation skills",
 "meta.title":"Mohamad Morshed Alkasem — Electromechanics Engineer",
 "meta.desc":"Electromechanics engineer working across energy systems, automotive electronics and industrial manufacturing. Master’s graduate of USTO-MB, Oran. Open to opportunities."
 };
@@ -952,7 +953,7 @@ I18N.fr = {
 "exp.eyebrow":"Expérience","exp.title":"Mon parcours professionnel","exp.lead":"Ingénierie de terrain, recherche, vente et coaching — chaque poste a compté.",
 "job1.t":"Ingénieur bureau technique","job1.d":"Octobre 2026 – aujourd’hui","job1.l":"· Algérie","job1.b1":"Affecté au bureau de l’entreprise pour appuyer les opérations internes et la coordination.","job1.g1":"Opérations","job1.g2":"Coordination",
 "job2.t":"Ingénieur de terrain","job2.d":"Avril 2026 – octobre 2026","job2.l":"· Algérie","job2.b1":"Supervision des activités de construction sur site.","job2.b2":"Coordination des opérations et des activités du chantier.","job2.b3":"Appui à la coordination des tâches de construction conformément aux exigences du projet.","job2.g1":"Supervision de chantier","job2.g2":"Construction","job2.g3":"Exigences projet",
-"job3.t":"Gérant de magasin","job3.d":"Décembre 2025 – avril 2026","job3.c":"Marché local <em>· Oran, Algérie</em>","job3.b1":"Gestion autonome des opérations quotidiennes du magasin.","job3.b2":"Traitement des ventes et service client.","job3.b3":"Organisation des marchandises et gestion de la disponibilité des produits.","job3.g1":"Gestion de magasin","job3.g2":"Vente","job3.g3":"Opérations",
+"job3.t":"Gérant de magasin","job3.d":"Décembre 2025 – avril 2026","job3.c":"Marché local <em>· Oran, Algérie</em>","job3.b1":"Gestion autonome des opérations quotidiennes du magasin.","job3.b2":"Traitement des ventes et du service client, et gestion de la disponibilité des produits.","job3.b3":"Organisation des marchandises et gestion de la disponibilité des produits.","job3.g1":"Gestion de magasin","job3.g2":"Vente","job3.g3":"Opérations",
 "job4.t":"Stagiaire ingénieur","job4.d":"22 déc. 2024 – 5 janv. 2025","job4.c":"CRTI — plateforme SMRIS <em>· Oran, Algérie</em>","job4.b1":"Conduite de la machine CNC CTX Beta 1250 TC.","job4.b2":"Participation à l’assemblage mécanique et à la maintenance électrique.","job4.b3":"Participation aux projets de recherche de la plateforme SMRIS.","job4.b4":"Attestation officielle de fin de stage obtenue.","job4.g1":"Usinage CNC","job4.g2":"Assemblage mécanique","job4.g3":"Recherche",
 "job5.t":"Coach sportif","job5.d":"Juillet – septembre 2024","job5.c":"Salle de sport locale <em>· Oran, Algérie</em>","job5.b1":"Entraînement des clients et encadrement des séances.","job5.b2":"Entretien des équipements et promotion de pratiques d’entraînement sûres.","job5.g1":"Coaching","job5.g2":"Entretien des équipements",
 "job6.t":"Emplois temporaires divers","job6.d":"2023","job6.c":"Oran, Algérie","job6.b1":"Développement du travail en équipe, de la communication et du sens des responsabilités.","job6.g1":"Travail en équipe","job6.g2":"Communication",
@@ -982,7 +983,7 @@ I18N.fr = {
 "ct.subject":"Objet","ct.subjectPh":"Quel est le sujet ?","ct.message":"Message","ct.msgPh":"Parlez-moi du poste ou du projet…",
 "ct.send":"Envoyer le message","ct.note":"Votre message arrive directement dans ma boîte mail.",
 "ft.tag":"Ingénieur en électromécanique · Systèmes énergétiques, électronique automobile & fabrication","ft.rights":"© 2025 Mohamad Morshed Alkasem · Conçu entièrement à la main à Oran, Algérie.",
-"top.label":"Retour en haut","th.fig0":"Microréseau simulé : raccordement au réseau (66 kV / 6,6 kV), parc éolien, parc PV principal, charge commerciale, station V2G (6,6 kV / 600 V) et départ résidentiel (6,6 kV / 240 V) avec BESS, PV résidentiel et maisons.","th.par.t":"Système simulé","th.p1":"Parc éolien 150 kW","th.p2":"Parc PV 100 kW + PV résidentiel 38 kW","th.p3":"Charges : commerciale 150 kW, résidentielle 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"Stations V2G 240 kW (30 kW chacune)","th.p6":"VE 352 kWh (44 kWh chacun)","th.p7":"Simulation de 24 h, mode phaseur","th.fig2b":"Déficit d’énergie pour les incitations, nombre de maisons et énergie par maison sur 24 heures.","th.fig.t":"Résultats de simulation","th.fig1":"Flux de puissance sur 24 heures : solaire, éolien, batterie, réseau et charge/injection des véhicules électriques face à la charge totale.","th.fig2":"Surplus d’énergie disponible pour les incitations, nombre de maisons servies et énergie par maison sur 24 heures.","th.fig3":"État de charge des véhicules électriques dans trois parkings sur 24 heures.","th.int.l":"Axes de recherche :","th.int":"microréseaux, gestion et optimisation de l’énergie, intégration des énergies renouvelables, véhicules électriques et vehicle-to-grid.","c15.t":"Certificat d’anglais EF SET — C2 (76/100)","c15.o":"EF SET — compréhension écrite et orale","c15.d":"21 octobre 2026","look.eyebrow":"Prochaine étape","look.title":"Ce que je recherche","look.c1t":"Emploi","look.c1d":"Postes d’ingénieur en systèmes énergétiques, électronique automobile ou fabrication industrielle — terrain, bureau technique ou R&D.","look.c2t":"Études","look.c2d":"Master et doctorat financés, et bourses, en systèmes énergétiques et génie électromécanique.","look.c3t":"Format et lieu","look.c3d":"Sur site ou à distance. Prêt à déménager, en Algérie ou à l’étranger.","learn.t":"En cours d’apprentissage","learn.1":"IA générative","learn.2":"Model Context Protocol","learn.3":"Communication professionnelle","learn.4":"Prise de parole et présentations",
+"top.label":"Retour en haut","exp.other":"Autres expériences","th.fig0":"Microréseau simulé : raccordement au réseau (66 kV / 6,6 kV), parc éolien, parc PV principal, charge commerciale, station V2G (6,6 kV / 600 V) et départ résidentiel (6,6 kV / 240 V) avec BESS, PV résidentiel et maisons.","th.par.t":"Système simulé","th.p1":"Parc éolien 150 kW","th.p2":"Parc PV 100 kW + PV résidentiel 38 kW","th.p3":"Charges : commerciale 150 kW, résidentielle 53 kW","th.p4":"BESS 180 kWh (SOC 20–95 %)","th.p5":"Stations V2G 240 kW (30 kW chacune)","th.p6":"VE 352 kWh (44 kWh chacun)","th.p7":"Simulation de 24 h, mode phaseur","th.fig2b":"Déficit d’énergie pour les incitations, nombre de maisons et énergie par maison sur 24 heures.","th.fig.t":"Résultats de simulation","th.fig1":"Flux de puissance sur 24 heures : solaire, éolien, batterie, réseau et charge/injection des véhicules électriques face à la charge totale.","th.fig2":"Surplus d’énergie disponible pour les incitations, nombre de maisons servies et énergie par maison sur 24 heures.","th.fig3":"État de charge des véhicules électriques dans trois parkings sur 24 heures.","th.int.l":"Axes de recherche :","th.int":"microréseaux, gestion et optimisation de l’énergie, intégration des énergies renouvelables, véhicules électriques et vehicle-to-grid.","c15.t":"Certificat d’anglais EF SET — C2 (76/100)","c15.o":"EF SET — compréhension écrite et orale","c15.d":"21 octobre 2026","look.eyebrow":"Prochaine étape","look.title":"Ce que je recherche","look.c1t":"Emploi","look.c1d":"Postes d’ingénieur en systèmes énergétiques, électronique automobile ou fabrication industrielle — terrain, bureau technique ou R&D.","look.c2t":"Études","look.c2d":"Master et doctorat financés, et bourses, en systèmes énergétiques et génie électromécanique.","look.c3t":"Format et lieu","look.c3d":"Sur site ou à distance. Prêt à déménager, en Algérie ou à l’étranger.","learn.t":"En cours d’apprentissage","learn.1":"IA générative","learn.2":"Model Context Protocol","learn.3":"Communication professionnelle","learn.4":"Prise de parole et présentations",
 "meta.title":"Mohamad Morshed Alkasem — Ingénieur en électromécanique",
 "meta.desc":"Ingénieur en électromécanique intervenant sur les systèmes énergétiques, l’électronique automobile et la fabrication industrielle. Diplômé d’un master de l’USTO-MB, Oran. Ouvert aux opportunités."
 };
@@ -1009,7 +1010,7 @@ I18N.ar = {
 "exp.eyebrow":"الخبرة","exp.title":"أين عملت","exp.lead":"هندسة ميدانية وبحث وتجارة وتدريب — وكل تجربة أضافت لي شيئاً.",
 "job1.t":"مهندس مكتب تقني","job1.d":"أكتوبر 2026 – الآن","job1.l":"· الجزائر","job1.b1":"مُعيَّن في مكتب الشركة لدعم العمليات الداخلية والتنسيق.","job1.g1":"العمليات","job1.g2":"التنسيق",
 "job2.t":"مهندس ميداني","job2.d":"أبريل 2026 – أكتوبر 2026","job2.l":"· الجزائر","job2.b1":"الإشراف على أعمال البناء في الموقع.","job2.b2":"تنسيق عمليات الموقع وأنشطة العمل.","job2.b3":"دعم تنسيق مهام البناء بما يتوافق مع متطلبات المشروع.","job2.g1":"الإشراف على الموقع","job2.g2":"البناء","job2.g3":"متطلبات المشروع",
-"job3.t":"مدير متجر","job3.d":"ديسمبر 2025 – أبريل 2026","job3.c":"السوق المحلي <em>· وهران، الجزائر</em>","job3.b1":"إدارة العمليات اليومية للمتجر بشكل مستقل.","job3.b2":"إتمام عمليات البيع وخدمة الزبائن.","job3.b3":"تنظيم البضائع وضمان توفّر المنتجات.","job3.g1":"إدارة المتجر","job3.g2":"المبيعات","job3.g3":"العمليات",
+"job3.t":"مدير متجر","job3.d":"ديسمبر 2025 – أبريل 2026","job3.c":"السوق المحلي <em>· وهران، الجزائر</em>","job3.b1":"إدارة العمليات اليومية للمتجر بشكل مستقل.","job3.b2":"إتمام عمليات البيع وخدمة الزبائن وضمان توفّر المنتجات.","job3.b3":"تنظيم البضائع وضمان توفّر المنتجات.","job3.g1":"إدارة المتجر","job3.g2":"المبيعات","job3.g3":"العمليات",
 "job4.t":"متدرّب مهندس","job4.d":"22 ديسمبر 2024 – 5 يناير 2025","job4.c":"CRTI — منصة SMRIS <em>· وهران، الجزائر</em>","job4.b1":"تشغيل آلة CNC من طراز CTX Beta 1250 TC.","job4.b2":"المساعدة في التجميع الميكانيكي والصيانة الكهربائية.","job4.b3":"المشاركة في المشاريع البحثية ضمن منصة SMRIS.","job4.b4":"الحصول على شهادة رسمية بإتمام التدريب.","job4.g1":"التشغيل بآلات CNC","job4.g2":"التجميع الميكانيكي","job4.g3":"البحث",
 "job5.t":"مدرّب رياضي","job5.d":"يوليو – سبتمبر 2024","job5.c":"قاعة رياضة محلية <em>· وهران، الجزائر</em>","job5.b1":"تدريب العملاء وتوجيه حصص التمرين.","job5.b2":"صيانة معدات القاعة وتشجيع عادات التدريب الآمن.","job5.g1":"التدريب","job5.g2":"صيانة المعدات",
 "job6.t":"وظائف مؤقتة متنوعة","job6.d":"2023","job6.c":"وهران، الجزائر","job6.b1":"تنمية مهارات العمل الجماعي والتواصل وتحمّل المسؤولية.","job6.g1":"العمل الجماعي","job6.g2":"التواصل",
@@ -1041,7 +1042,7 @@ I18N.ar = {
 "ct.subject":"الموضوع","ct.subjectPh":"ما موضوع رسالتك؟","ct.message":"الرسالة","ct.msgPh":"حدّثني عن الوظيفة أو المشروع…",
 "ct.send":"إرسال الرسالة","ct.note":"تصل رسالتك مباشرة إلى بريدي الوارد.",
 "ft.tag":"مهندس كهروميكانيك · أنظمة الطاقة وإلكترونيات السيارات والتصنيع","ft.rights":"© 2025 Mohamad Morshed Alkasem · صُمّم من الصفر في وهران، الجزائر.",
-"top.label":"العودة إلى الأعلى","th.fig0":"الشبكة الصغيرة المحاكاة: الربط بالشبكة (66 kV / 6.6 kV)، مزرعة الرياح، الحقل الكهروضوئي الرئيسي، الحمل التجاري، محطة V2G (6.6 kV / 600 V) وخط سكني (6.6 kV / 240 V) مع نظام التخزين BESS والطاقة الكهروضوئية السكنية والمنازل.","th.par.t":"المنظومة المحاكاة","th.p1":"مزرعة رياح 150 kW","th.p2":"حقل كهروضوئي 100 kW + كهروضوئي سكني 38 kW","th.p3":"الأحمال: تجارية 150 kW، سكنية 53 kW","th.p4":"نظام تخزين BESS بسعة 180 kWh (SOC بين 20 و95%)","th.p5":"محطات V2G بقدرة 240 kW (30 kW لكل محطة)","th.p6":"مركبات كهربائية 352 kWh (44 kWh لكل مركبة)","th.p7":"محاكاة لمدة 24 ساعة بالنمط الطوري (Phasor)","th.fig2b":"عجز الطاقة المخصص للحوافز وعدد المنازل والطاقة لكل منزل خلال 24 ساعة.","th.fig.t":"نتائج المحاكاة","th.fig1":"تدفق القدرة خلال 24 ساعة: الطاقة الشمسية والرياح والبطارية والشبكة وشحن/حقن المركبات الكهربائية مقابل الحمل الكلي.","th.fig2":"فائض الطاقة المتاح للحوافز وعدد المنازل المخدومة والطاقة لكل منزل خلال 24 ساعة.","th.fig3":"حالة شحن المركبات الكهربائية في ثلاثة مواقف خلال 24 ساعة.","th.int.l":"اهتمامات بحثية:","th.int":"الشبكات الصغيرة، إدارة الطاقة وتحسينها، دمج الطاقات المتجددة، المركبات الكهربائية والربط بين المركبة والشبكة (V2G).","c15.t":"شهادة الإنجليزية EF SET — C2 (76/100)","c15.o":"EF SET — القراءة والاستماع","c15.d":"21 أكتوبر 2026","look.eyebrow":"الخطوة التالية","look.title":"ما الذي أبحث عنه","look.c1t":"العمل","look.c1d":"وظائف هندسية في أنظمة الطاقة أو إلكترونيات السيارات أو التصنيع الصناعي — ميدانية أو مكتب تقني أو بحث وتطوير.","look.c2t":"الدراسة","look.c2d":"مناصب ماستر ودكتوراه ممولة ومنح دراسية في أنظمة الطاقة والهندسة الكهروميكانيكية.","look.c3t":"الصيغة والمكان","look.c3d":"حضورياً أو عن بُعد. مستعد للانتقال داخل الجزائر أو خارجها.","learn.t":"أتعلّمه حالياً","learn.1":"الذكاء الاصطناعي التوليدي","learn.2":"بروتوكول سياق النموذج (MCP)","learn.3":"التواصل في بيئة الأعمال","learn.4":"مهارات العرض والتقديم",
+"top.label":"العودة إلى الأعلى","exp.other":"خبرات أخرى","th.fig0":"الشبكة الصغيرة المحاكاة: الربط بالشبكة (66 kV / 6.6 kV)، مزرعة الرياح، الحقل الكهروضوئي الرئيسي، الحمل التجاري، محطة V2G (6.6 kV / 600 V) وخط سكني (6.6 kV / 240 V) مع نظام التخزين BESS والطاقة الكهروضوئية السكنية والمنازل.","th.par.t":"المنظومة المحاكاة","th.p1":"مزرعة رياح 150 kW","th.p2":"حقل كهروضوئي 100 kW + كهروضوئي سكني 38 kW","th.p3":"الأحمال: تجارية 150 kW، سكنية 53 kW","th.p4":"نظام تخزين BESS بسعة 180 kWh (SOC بين 20 و95%)","th.p5":"محطات V2G بقدرة 240 kW (30 kW لكل محطة)","th.p6":"مركبات كهربائية 352 kWh (44 kWh لكل مركبة)","th.p7":"محاكاة لمدة 24 ساعة بالنمط الطوري (Phasor)","th.fig2b":"عجز الطاقة المخصص للحوافز وعدد المنازل والطاقة لكل منزل خلال 24 ساعة.","th.fig.t":"نتائج المحاكاة","th.fig1":"تدفق القدرة خلال 24 ساعة: الطاقة الشمسية والرياح والبطارية والشبكة وشحن/حقن المركبات الكهربائية مقابل الحمل الكلي.","th.fig2":"فائض الطاقة المتاح للحوافز وعدد المنازل المخدومة والطاقة لكل منزل خلال 24 ساعة.","th.fig3":"حالة شحن المركبات الكهربائية في ثلاثة مواقف خلال 24 ساعة.","th.int.l":"اهتمامات بحثية:","th.int":"الشبكات الصغيرة، إدارة الطاقة وتحسينها، دمج الطاقات المتجددة، المركبات الكهربائية والربط بين المركبة والشبكة (V2G).","c15.t":"شهادة الإنجليزية EF SET — C2 (76/100)","c15.o":"EF SET — القراءة والاستماع","c15.d":"21 أكتوبر 2026","look.eyebrow":"الخطوة التالية","look.title":"ما الذي أبحث عنه","look.c1t":"العمل","look.c1d":"وظائف هندسية في أنظمة الطاقة أو إلكترونيات السيارات أو التصنيع الصناعي — ميدانية أو مكتب تقني أو بحث وتطوير.","look.c2t":"الدراسة","look.c2d":"مناصب ماستر ودكتوراه ممولة ومنح دراسية في أنظمة الطاقة والهندسة الكهروميكانيكية.","look.c3t":"الصيغة والمكان","look.c3d":"حضورياً أو عن بُعد. مستعد للانتقال داخل الجزائر أو خارجها.","learn.t":"أتعلّمه حالياً","learn.1":"الذكاء الاصطناعي التوليدي","learn.2":"بروتوكول سياق النموذج (MCP)","learn.3":"التواصل في بيئة الأعمال","learn.4":"مهارات العرض والتقديم",
 "meta.title":"Mohamad Morshed Alkasem — مهندس كهروميكانيك",
 "meta.desc":"مهندس كهروميكانيك يعمل في أنظمة الطاقة وإلكترونيات السيارات والتصنيع الصناعي. خريج ماستر من USTO‑MB وهران. متاح للفرص."
 };
@@ -1177,7 +1178,7 @@ function applyLang(lang,pushUrl){
  var COLORS=["255,45,120","0,212,255","255,170,0"];
  var dots=[],W=0,H=0,dpr=1,raf=0;
  function size(){
-  dpr=Math.min(window.devicePixelRatio||1,2);
+  dpr=1;
   W=window.innerWidth;H=window.innerHeight;
   cv.width=Math.floor(W*dpr);cv.height=Math.floor(H*dpr);
   cv.style.width=W+"px";cv.style.height=H+"px";
@@ -1245,7 +1246,7 @@ function applyLang(lang,pushUrl){
   dot.style.transform="translate3d("+mx+"px,"+my+"px,0) translate(-50%,-50%)";
  },{passive:true});
  (function loop(){
-  rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+  rx+=(mx-rx)*.32;ry+=(my-ry)*.32;
   ring.style.transform="translate3d("+rx+"px,"+ry+"px,0) translate(-50%,-50%)";
   requestAnimationFrame(loop);
  })();
